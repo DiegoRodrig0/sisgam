@@ -5,11 +5,11 @@
 
 DEPARTAMENTO DE COMPUTAÇÃO</br>
 SISTEMAS DE INFORMAÇÃO</br>
-</br></br>
+</br>
 
 [![interação_homem_máquina](https://img.shields.io/badge/Interação_Homem_Máquina-Profa%20Eveline%20Sá-blue.svg)](url)</br>
 [![engenharia_de_software](https://img.shields.io/badge/Engenharia_de_Software-Prof%20Daniel%20Lima%20Jr-blue.svg)](url)</br>
-</br></br>
+</br>
 
 DIEGO RODRIGO DO CARMO TEIXEIRA</br>
 JAILSON SOARES CANTANHEDE</br>
@@ -19,7 +19,7 @@ ODIVAL QUARESMA NETO</br>
 
 Relatório Técnico do Sistema de Gerenciamento Alertas de Manutenção</br>
 Cliente: Empresa Maranhense de Manutenção Ferroviária (EMSERF)</br>
-</br></br>
+</br>
 
 
 SÃO LUÍS, MA </br>
