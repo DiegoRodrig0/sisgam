@@ -44,8 +44,8 @@ Como MVP, temos uma **Aplicação Web para Gerenciamento do Mapa de Alertas de M
 
 | Documentação Geral | Mestre | Foco |Status |
 | ----------- | ---------------------- | ------------------------- | --------- |
-| <a href="https://github.com/yullano90/EMSERF_Service_Map_Manager/blob/main/Documenta%C3%A7%C3%A3o/1.%20Project_IHC.md"> Projeto IHM </a> | ![Eveline_de_Jesus_Viana_Sá](https://img.shields.io/badge/Eveline_de_Jesus_Viana_Sá-IHM-yellow.svg) | Prototipagem de Software e Modelagem de Usuário | *Andamento* |
-| <a href="https://github.com/yullano90/EMSERF_Service_Map_Manager/blob/main/Documenta%C3%A7%C3%A3o/2.%20Project_ES.md"> Projeto ES </a> | ![Daniel_Lima_Gomes_Junior](https://img.shields.io/badge/Daniel_Lima_Gomes_Junior-ES-yellow.svg)  | Qualidade no Desenvolvimento de Software  |*Andamento*  |
+| <a href="https://github.com/yullano90/EMSERF_Service_Map_Manager/blob/main/Documenta%C3%A7%C3%A3o/1.%20Project_IHC.md"> Projeto IHM </a> | ![Eveline_Sá](https://img.shields.io/badge/Eveline_Sá-IHM-yellow.svg) | Prototipagem de Software e Modelagem de Usuário | *Andamento* |
+| <a href="https://github.com/yullano90/EMSERF_Service_Map_Manager/blob/main/Documenta%C3%A7%C3%A3o/2.%20Project_ES.md"> Projeto ES </a> | ![Daniel_Lima](https://img.shields.io/badge/Daniel_Lima-ES-yellow.svg)  | Qualidade no Desenvolvimento de Software  |*Andamento*  |
 
 
 ---
