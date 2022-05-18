@@ -17,7 +17,7 @@ IULANO SILVA DOS SANTOS</br>
 ODIVAL QUARESMA NETO</br>
 </br></br>
 
-Relatório Técnico do Sistema de Gerenciamento Alertas de Manutenção</br>
+Relatório Técnico do Sistema de Gerenciamento de Alertas de Manutenção</br>
 Cliente: Empresa Maranhense de Serviços Ferroviários (EMSERF)</br>
 </br>
 
@@ -39,6 +39,14 @@ O setor de manutenção manda um "planilhão de excel" semanalmente com a relaç
 Esse processo fatalmente demanda tempo, concentração, sujeição à falha humana e gera impacto direto na fila de demandas do time de Desenvolvedores.
 
 Como MVP, temos uma **Aplicação Web para Gerenciamento do Mapa de Alertas de Manutenção**.
+
+---
+
+| Projeto | Mestre | Status |
+| ----------- | ---------------------- | ------------------------- |
+| <a href="https://github.com/yullano90/EMSERF_Service_Map_Manager/blob/main/Documenta%C3%A7%C3%A3o/1.%20Project_IHC.md"> Projeto IHM </a> | [![Eveline_de_Jesus_Viana_Sá](https://img.shields.io/badge/Eveline_de_Jesus_Viana_Sá-IHM-blue.svg)] | *Andamento* |
+| <a href="https://github.com/yullano90/EMSERF_Service_Map_Manager/blob/main/Documenta%C3%A7%C3%A3o/2.%20Project_ES.md"> Projeto ES </a> | [![Daniel_Lima_Gomes_Junior](https://img.shields.io/badge/Daniel_Lima_Gomes_Junior-ESOFT-blue.svg)] | *Andamento*  |
+
 
 ---
 
