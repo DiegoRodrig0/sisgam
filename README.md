@@ -54,17 +54,11 @@ Vide abaixo as tecnologias utilizadas na construção da aplicação:
 
 ### • Tecnologias
 
-		Diagramação da Arquitetura e Prototipagem de Interface da app:
+- [x] Draw.io + Figma para Diagramação da Arquitetura e Prototipagem de Interface da app.
 
-- [x] Draw.io + Figma
+- [x] ReactJS + NodeJS para Desenvolvimento da Interface + API com a Stack Javascript.
 
-		Desenvolvimento da Interface + API com a Stack Javascript:
-
-- [x] ReactJS + NodeJS
-
-		Desenvolvimento, Modelagem e Adminstração do Banco de Dados:
-
-- [x] HeidiSQL + MySQL
+- [x] HeidiSQL + MySQL para Desenvolvimento, Modelagem e Adminstração do Banco de Dados.
 
 ---
 
