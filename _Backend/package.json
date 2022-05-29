@@ -1,0 +1,21 @@
+{
+  "name": "sisgam_emserf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yullano90/emserf_service_map_manager"
+  },
+  "author": "Equipe de TI @EMSERF",
+  "license": "ISC",
+  "dependencies": {
+    "@mysql/xdevapi": "^8.0.27",
+    "cors": "^2.8.5",
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2"
+  }
+}
