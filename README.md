@@ -50,15 +50,16 @@ Como MVP, temos uma **Aplicação Web para Gerenciamento do Mapa de Alertas de M
 
 ---
 
-Vide abaixo as tecnologias utilizadas na construção da aplicação:
 
 ### • Tecnologias
 
-- [x] Draw.io + Figma para Diagramação da Arquitetura e Prototipagem de Interface da app.
+- [x] **Draw.io + Figma** para Diagramação da Arquitetura e Prototipagem de Interface da app.
 
-- [x] ReactJS + NodeJS para Desenvolvimento da Interface + API com a Stack Javascript.
+- [x] **ReactJS + NodeJS** para Desenvolvimento da Interface + API com a Stack Javascript.
 
-- [x] HeidiSQL + MySQL para Desenvolvimento, Modelagem e Adminstração do Banco de Dados.
+- [x] **HeidiSQL + MySQL** para Desenvolvimento, Modelagem e Adminstração do Banco de Dados.
+
+- [x] **Trello** para apoio no Controle do Product Backlog + Planejamento e Fluxo de Sprints.
 
 ---
 
