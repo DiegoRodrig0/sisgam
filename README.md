@@ -28,7 +28,7 @@ SÃO LUÍS, MA </br>
 
 ---
 
-### • Estudo de Caso
+### • Demanda
 
 Empresas de grande porte que trabalham com manutenção, logística, gerenciamento de estoque, etc. geralmente possuem sistemas de informação que geram alertas, seja para manutenção de equipamentos, seja para informar atualização de estoque, manutenções urgentes e etc.
 
@@ -52,27 +52,23 @@ Como MVP, temos uma **Aplicação Web para Gerenciamento do Mapa de Alertas de M
 
 Vide abaixo as tecnologias utilizadas na construção da aplicação:
 
-### • MVP Prototype
+### • Tecnologias
 
-	 Diagramação da arquitetura e Prototipagem de interface da app.
-- [x] Draw.io
-- [x] Figma
+Diagramação da Arquitetura e Prototipagem de Interface da app.
 
+- [x] Draw.io + Figma
 
-### • Client-side + Server-side
+Client-side + Server-side: Desenvolvimento da Interface + API com a Stack Javascript.
 
-	Desenvolvimento da interface + API com a Stack Javascript.
-- [x] ReactJS
-- [x] NodeJS
-	
-### • Database
+- [x] ReactJS + NodeJS
 
-	Desenvolvimento, Modelagem e Adminstração.
+Database: Desenvolvimento, Modelagem e Adminstração.
 
-- [x] HeidiSQL
-- [x] MySQL
+- [x] HeidiSQL + MySQL
 
 ---
+
+### • Equipe
 
 | Documentação |Programador| Disciplina(s)| Status|
 | ----------------- | -------- | ----------------- |-------|
