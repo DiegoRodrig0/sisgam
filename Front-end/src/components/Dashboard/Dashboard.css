@@ -1,0 +1,16 @@
+#dashboard{
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: block;
+    min-height: 75vh;
+    padding: 0 2rem;
+    background-color: white;
+    border-color: #ccf0f4;
+    background: #4B4B4B;
+}
+
+h1{
+    color: whitesmoke;
+}

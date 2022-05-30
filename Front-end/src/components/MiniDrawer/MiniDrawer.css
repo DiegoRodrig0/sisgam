@@ -1,0 +1,15 @@
+/* Sobreposição closeDrawer */
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionFixed.mui-fixed.css-19z1ozs-MuiPaper-root-MuiAppBar-root{
+    background-color: #242424;
+}        
+
+/* Sobreposição showDrawer */
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionFixed.mui-fixed.css-1191obr-MuiPaper-root-MuiAppBar-root{
+    background-color: #242424;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.css-12i7wg6-MuiPaper-root-MuiDrawer-paper:hover{
+    background: white;
+    box-shadow: inset 0 0 1em whitesmoke, 0 0 1em grey;
+}
+
