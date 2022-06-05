@@ -76,11 +76,9 @@ Munidos de Models e Controllers, construimos o componente *Routes*, vide abaixo:
 
 ---
 
-### <a href="https://github.com/yullano90/emserf_service_map_manager/tree/master/_Back-end"> ACESSE O CÓDIGO COMPLETO AQUI. </a>
+<!-- ### <a href="https://github.com/yullano90/emserf_service_map_manager/tree/master/_Back-end"> ACESSE O CÓDIGO COMPLETO AQUI. </a> -->
 
 
-### IMPORTANTE: 
+<!-- ### IMPORTANTE: 
 *O bom programador, ao documentar o comportamento da API durante requisições HTTP, usa o 'Index' pra "logar" o feedback no console da API e
-a 'Controller' para "logar" no console do cliente. Assim a manutenção da aplicação torna mais fácil a rastreabilidade/mapeamento de erros.*
-
----
+a 'Controller' para "logar" no console do cliente. Assim a manutenção da aplicação torna mais fácil a rastreabilidade/mapeamento de erros.* -->

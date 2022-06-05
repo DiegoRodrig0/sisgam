@@ -1,7 +1,7 @@
-const sisgamDb = require('../repository/sisgamDb');
-const Unity = function () { };
+const sisgamDb = require('../repository/sisgam_Db');
+const Sisgam_Unity_Model = function () { };
 
-Unity.getAllUnits = async function () {
+Sisgam_Unity_Model.getAllUnits = async function () {
     const connection = await sisgamDb.getConnection();
     const query = connection.sql('SELECT unidade_emserf FROM tbunidades_emserf');
 
@@ -18,4 +18,4 @@ Unity.getAllUnits = async function () {
     return data.fetchAll();
 }
 
-module.exports = Unity;
+module.exports = Sisgam_Unity_Model;
