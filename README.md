@@ -59,11 +59,13 @@ Como MVP, temos uma **Aplicação Web para Gerenciamento do Mapa de Alertas de M
 
 - [x] **HeidiSQL + MySQL** para Desenvolvimento, Modelagem e Adminstração do Banco de Dados.
 
-- [x] **Trello** para apoio no Controle do Product Backlog + Planejamento e Fluxo de Sprints.
+- [x] **Github Projects** para apoio no Controle do Product Backlog e gerenciamento de tasks.
 
 ---
 
 ### • Equipe
+
+Clique para ver a divisão das tarefas: <a href="https://github.com/yullano90/emserf_service_map_manager/projects/1?fullscreen=true"> **Sisgam | Product Backlog** </a>
 
 | Tecnologias |Programador| Disciplina(s)|
 | ----------------- | -------- | ----------------- |
