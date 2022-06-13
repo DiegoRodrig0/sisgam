@@ -15,8 +15,8 @@
 
 | Link Principal | Professor(a) | Foco |
 | ----------- | ---------------------- | ------------------------- |
-| <a href="https://github.com/yullano90/EMSERF_Service_Map_Manager/blob/main/Documenta%C3%A7%C3%A3o/1.%20Project_IHC.md"> Projeto IHM </a> | [![interação_homem_máquina](https://img.shields.io/badge/Interação_Homem_Máquina-Eveline%20Sá-blue.svg)](https://br.linkedin.com/in/eveline-s%C3%A1-436349162) | Prototipagem de Software e Modelagem de Usuário |
-| <a href="https://github.com/yullano90/EMSERF_Service_Map_Manager/blob/main/Documenta%C3%A7%C3%A3o/2.%20Project_ES.md"> Projeto ESOFT </a> | [![engenharia_de_software](https://img.shields.io/badge/Engenharia_de_Software-Daniel%20Lima-blue.svg)](https://br.linkedin.com/in/danieljr)  | Qualidade no Desenvolvimento de Software  |
+| <a href="https://github.com/yullano90/emserf_service_map_manager/blob/master/Documenta%C3%A7%C3%A3o/1.%20Project_IHC.md"> Projeto IHM </a> | [![interação_homem_máquina](https://img.shields.io/badge/Interação_Homem_Máquina-Eveline%20Sá-blue.svg)](https://br.linkedin.com/in/eveline-s%C3%A1-436349162) | Prototipagem de Software e Modelagem de Usuário |
+| <a href="https://github.com/yullano90/emserf_service_map_manager/blob/master/Documenta%C3%A7%C3%A3o/2.%20Project_ES.md"> Projeto ESOFT </a> | [![engenharia_de_software](https://img.shields.io/badge/Engenharia_de_Software-Daniel%20Lima-blue.svg)](https://br.linkedin.com/in/danieljr)  | Qualidade no Desenvolvimento de Software  |
 
 
 ---
