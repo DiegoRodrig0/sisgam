@@ -19,6 +19,7 @@ import ListItemText from '@mui/material/ListItemText';
 
 import './MiniDrawer.css';
 import LogoutIcon from '@mui/icons-material/Logout';
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import WarehouseIcon from '@mui/icons-material/Warehouse';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import { useNavigate } from 'react-router-dom';
@@ -130,7 +131,7 @@ export default function MiniDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Gerenciamento de Alertas de Manutenção
+            SISGAM  • Sistema de Gerenciamento de Alertas de Manutenção
           </Typography>
         </Toolbar>
       </AppBar>
@@ -144,7 +145,7 @@ export default function MiniDrawer(props) {
 
         {/* ================  Rota de Sedes ===================== */}
         <List onClick={(e) => navigate(`/`)}>
-          {['Sedes IFMA'].map((text, index) => (
+          {['Unidades IFMA'].map((text, index) => (
             <ListItemButton
               key={text}
               sx={{
@@ -168,8 +169,8 @@ export default function MiniDrawer(props) {
         </List>
         
         {/* ================  Rota Export  ===================== */}
-        <List onClick={(e) => navigate(`/exportExcel`)}>
-          {['Relatórios'].map((text, index) => (
+        <List onClick={(e) => navigate(`/userDt/1`)}>
+          {['Export Excel'].map((text, index) => (
             <ListItemButton
               key={text}
               sx={{
@@ -195,7 +196,7 @@ export default function MiniDrawer(props) {
         {/* ================  Rota Logout ===================== */}
         {/* <List onClick={(e) => navigate(`/login`)}> */}
         <List onClick={(e) => handleLogout()}>
-          {['Logout'].map((text, index) => (
+          {['Login/Logout'].map((text, index) => (
             <ListItemButton
               key={text}
               sx={{

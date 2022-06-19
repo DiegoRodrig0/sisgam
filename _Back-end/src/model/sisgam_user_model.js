@@ -1,9 +1,9 @@
-const sisgamDb = require('../repository/sisgam_Db');
-const Sisgam_User_Model = function () { };
+const sisgamDb = require('../repository/sisgamDb');
+const User = function () { };
 
-Sisgam_User_Model.getAllUsers = async function () {
+User.getAllUsers = async function () {
     const connection = await sisgamDb.getConnection();
-    const query = connection.sql('SELECT * FROM tbusers_emserf');
+    const query = connection.sql('SELECT * from tb_user_sisgam');
 
     let data = [];
     try {
@@ -18,4 +18,45 @@ Sisgam_User_Model.getAllUsers = async function () {
     return data.fetchAll();
 }
 
-module.exports = Sisgam_User_Model;
+User.insertUsers = async function (email) {
+    const connection = await sisgamDb.getConnection();
+    const query = connection.sql(
+        `INSERT INTO tb_user_sisgam (email)
+        VALUES (?)`
+    ).bind([email]);
+    let data = [];
+    try {
+        data = await query.execute();
+    } catch (ex) {
+        if (connection)
+            connection.close();
+        throw ex;
+    }
+    connection.close();
+    return data.getAutoIncrementValue();
+}
+
+User.findIdByEmail = async function (email) {
+    const connection = await sisgamDb.getConnection();
+    const query = connection.sql(
+        `SELECT id FROM tb_user_sisgam
+       WHERE email = ?`
+    ).bind([email]);
+    let data = [];
+    let id = -1;
+    try {
+        data = await query.execute();
+        let queryResponse = data.fetchOne();
+        if (queryResponse && queryResponse.length > 0){
+            id = queryResponse[0];
+        }
+    } catch (ex) {
+        if (connection)
+            connection.close();
+        throw ex;
+    }
+    connection.close();
+    return id;
+}
+
+module.exports = User;

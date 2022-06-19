@@ -1,8 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from './App' 
+import App from './App'
+import SedesViewReport from "./components/SedesViewReport/SedesViewReport";
+import SedeDetails from "./components/SedeDetails/SedeDetails";
+import UserDetails from "./components/UserDetails/UserDetails";
 import LoginPage from './components/LoginPage/LoginPage';
-import Reports from './components/Reports/Reports';
 
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { AuthContext, AuthProvider } from "./components/Context/Auth.jsx"
@@ -26,7 +28,9 @@ const AppRoutes = () => {
     return (<Routes>
       <Route exact path="/" element={<App />}>
         <Route exact path="/login" element={<LoginPage />} />
-        <Route path="/exportExcel" element={<Reports />} />
+        <Route index element={<SedesViewReport />} />
+        <Route path="/sedesDt/:sedeId" element={<SedeDetails />} />
+        <Route path="/userDt/:receiver_id" element={<UserDetails />} />
       </Route>
     </Routes>)
   }

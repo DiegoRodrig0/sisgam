@@ -1,0 +1,23 @@
+.MuiDataGrid-root.css-1xy1myn-MuiDataGrid-root{
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+    min-height: 6vh;
+
+    padding: 0 2rem;
+    background-color: white;
+    width: 300%;
+    border-radius: 1%;
+    box-shadow: inset 0 0 0.5em #d1d4d4, 0 0 0.5em rgb(175, 174, 174);  
+}
+
+.MuiDataGrid-virtualScrollerContent.css-1kwdphh-MuiDataGrid-virtualScrollerContent{
+    background-color: white;
+    border-top-left-radius: 1%;
+    border-top-right-radius: 1%;
+    background: white;	
+}
+
+.GridPreferencesPanel{
+    background: white;
+}

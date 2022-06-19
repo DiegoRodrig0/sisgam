@@ -1,0 +1,18 @@
+.SedeUserTable{
+    background-color: black;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+
+}
+
+.MuiPaper-root.MuiPaper-outlined.MuiPaper-rounded.MuiPaper-outlined.MuiPaper-rounded{
+    background-color: black;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.MuiCardActions-root.MuiCardActions-spacing.css-1t6e9jv-MuiCardActions-root{
+    background-color: black;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}

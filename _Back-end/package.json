@@ -1,5 +1,5 @@
 {
-  "name": "sisgam_emserf",
+  "name": "sisgam_manager_api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,11 +10,12 @@
     "type": "git",
     "url": "https://github.com/yullano90/emserf_service_map_manager"
   },
-  "author": "Equipe de TI @EMSERF",
+  "author": "Automação Eletro",
   "license": "ISC",
   "dependencies": {
     "@mysql/xdevapi": "^8.0.27",
     "cors": "^2.8.5",
+    "debuglog": "^1.0.1",
     "dotenv": "^11.0.0",
     "express": "^4.17.2"
   }

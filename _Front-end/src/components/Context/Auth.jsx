@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
 
         localStorage.setItem("user", JSON.stringify(loggedUser));
 
-        if (password === "12345") {
+        if (password === "teste") {
             setUser(loggedUser);
             navigate("/");
             console.log("Login realizado com sucesso")

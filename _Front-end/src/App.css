@@ -6,7 +6,7 @@
   text-align: center;
   align-content: center;
   border: 0.001px solid #1883d7;
-  background-color: #4B4B4B;
+  background-color: whitesmoke;
   min-height: 10vh;
   font-size: calc(1px + 2vmin);
   color: rgb(131, 130, 130);
@@ -63,6 +63,6 @@ Footer{
   align-items: center;
   justify-content: center;
   font-size: calc(4px + 2vmin);
-  color: white;
+  color: rgb(68, 68, 68);
   font-family: "Roboto","Helvetica","Arial",sans-serif;
 }

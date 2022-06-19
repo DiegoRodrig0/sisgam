@@ -1,67 +1,126 @@
-CREATE DATABASE db_Sisgam_Emserf;
-USE db_Sisgam_Emserf;
-CREATE TABLE tbUsers_Emserf (
-  id_email int, 
-  user_Emserf varchar(100) ,
-  funcao_Emserf varchar(100) ,
-  PRIMARY KEY (id_email),
-  UNIQUE KEY email (user_Emserf)
-);
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               8.0.27 - MySQL Community Server - GPL
+-- Server OS:                    Win64
+-- HeidiSQL Version:             11.3.0.6295
+-- --------------------------------------------------------
 
-INSERT INTO tbUsers_Emserf (id_email, user_Emserf, funcao_Emserf) VALUES
-	(1, "jailson.soares@emserf.com", "Técnico Ferroviário"),
-	(2, "yullano.santos@emserf.com", "Técnico Ferroviário"),
-	(3, "odival.quaresma@emserf.com", "Técnico Ferroviário"),
-	(4, "diego.teixeira@emserf.com", "Técnico Ferroviário"),
-	(5, "daniel.gomes@emserf.com", "Gerente Operacional"),
-	(6, "eveline.sa@emserf.com", "Diretora Executiva");
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
-CREATE TABLE tbUnidades_Emserf (
-  id_unidade int,
-  unidade_Emserf varchar(50),
-  PRIMARY KEY (id_unidade)
-);
-INSERT INTO tbUnidades_Emserf (id_unidade, unidade_Emserf) VALUES
-	(1, 'Monte Castelo'),
-	(2, 'Centro Histórico'),
-	(3, 'São José de Ribamar'),
-	(4, 'Maracanã'),
-	(5, 'Prédio da Reitoria'),
-	(6, 'Itaqui Bacanga');
 
-CREATE TABLE tbEnderecos_Emserf (
-  id_endereco int, 
-  unidade_Endereco VARCHAR(100)  DEFAULT '',
-  unidade_Bairro VARCHAR(50)  DEFAULT '',
-  unidade_Cidade VARCHAR(50)  DEFAULT '',
-  PRIMARY KEY (id_endereco),
-  KEY FK_Endereco_Unidade (id_endereco),
-  CONSTRAINT FK_Unidade_Emserf FOREIGN KEY (id_endereco) REFERENCES tbUnidades_Emserf (id_unidade)
-);
-INSERT INTO tbEnderecos_Emserf (id_endereco, unidade_Endereco, unidade_Bairro, unidade_Cidade) VALUES
-	(1, 'Av. Getúlio Vargas', 'Monte Castelo', 'São Luís - MA'),
-	(2, 'Av. Cel. Colares Moreira', 'Jardim Renascença', 'São Luís - MA'),
-	(3, 'Rodovia MA 201', 'Piçarreira','São José de Ribamar - MA'),
-	(4, 'Av. dos Curiós', 'Vila Esperança', 'São Luís - MA'),
-	(5, 'Av. Cel. Colares Moreira', 'Jardim Renascença', 'São Luís - MA'),
-	(6, 'Av. Newton Belo', 'Vila Maria', 'Imperatriz - MA');	
-    
-CREATE TABLE tbMapa_Emserf (
-  id_Mapa int NOT NULL AUTO_INCREMENT,
-  id_UserMapa int DEFAULT NULL,
-  id_UnidadeMapa int DEFAULT NULL,
-  PRIMARY KEY (id_mapa),
-  UNIQUE KEY USER_ID_UNIDADE_ID (id_Mapa, id_UnidadeMapa ),
-  KEY fk_tbMapa_Emserf_id_UnidadeMapa (id_UnidadeMapa),
-  KEY fk_tbMapa_Emserf_id_Mapa (id_Mapa),
-  CONSTRAINT fk_tbMapa_Emserf_id_UnidadeMapa FOREIGN KEY (id_Mapa) REFERENCES tbUsers_Emserf (id_email),
-  CONSTRAINT fk_tbMapa_Emserf_id_Mapa FOREIGN KEY (id_UnidadeMapa) REFERENCES tbUnidades_Emserf (id_unidade)
-);
+-- Dumping database structure for db_sisgam_emserf
+CREATE DATABASE IF NOT EXISTS `db_sisgam_emserf` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `db_sisgam_emserf`;
 
-INSERT INTO tbMapa_Emserf (id_Mapa, id_UserMapa, id_UnidadeMapa) VALUES
+-- Dumping structure for table db_sisgam_emserf.tb_map_sisgam
+CREATE TABLE IF NOT EXISTS `tb_map_sisgam` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `receiver_id` int DEFAULT NULL,
+  `sede_id` int DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `receiver_id_sede_id` (`receiver_id`,`sede_id`),
+  KEY `fk_receiversede_sede_idx` (`sede_id`),
+  KEY `fk_receiversede_receiver_idx` (`receiver_id`),
+  CONSTRAINT `fk_receiversede_receiver` FOREIGN KEY (`receiver_id`) REFERENCES `tb_user_sisgam` (`id`),
+  CONSTRAINT `fk_receiversede_sede` FOREIGN KEY (`sede_id`) REFERENCES `tb_unity_sisgam` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=380 DEFAULT CHARSET=utf8mb3;
+
+-- Dumping data for table db_sisgam_emserf.tb_map_sisgam: ~23 rows (approximately)
+DELETE FROM `tb_map_sisgam`;
+/*!40000 ALTER TABLE `tb_map_sisgam` DISABLE KEYS */;
+INSERT INTO `tb_map_sisgam` (`id`, `receiver_id`, `sede_id`) VALUES
 	(1, 1, 1),
-	(2, 2, 1),
-	(3, 3, 1),
-	(4, 4, 1),
-	(5, 5, 1),	
-	(6, 6, 1);
+	(2, 2, 2),
+	(373, 2, 5),
+	(3, 3, 3),
+	(4, 4, 4),
+	(5, 5, 9),
+	(366, 6, 9),
+	(21, 7, 4),
+	(368, 7, 5),
+	(7, 7, 9),
+	(8, 8, 8),
+	(9, 9, 1),
+	(12, 12, 6),
+	(13, 13, 2),
+	(14, 14, 3),
+	(15, 15, 4),
+	(169, 16, 3),
+	(16, 16, 5),
+	(369, 17, 5),
+	(17, 17, 6),
+	(374, 18, 2),
+	(370, 18, 5),
+	(18, 18, 8),
+	(365, 19, 1),
+	(19, 19, 7),
+	(363, 20, 2),
+	(20, 20, 5);
+/*!40000 ALTER TABLE `tb_map_sisgam` ENABLE KEYS */;
+
+-- Dumping structure for table db_sisgam_emserf.tb_unity_sisgam
+CREATE TABLE IF NOT EXISTS `tb_unity_sisgam` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) DEFAULT NULL,
+  `site` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  `ref` text CHARACTER SET utf8 COLLATE utf8_general_ci,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
+
+-- Dumping data for table db_sisgam_emserf.tb_unity_sisgam: ~15 rows (approximately)
+DELETE FROM `tb_unity_sisgam`;
+/*!40000 ALTER TABLE `tb_unity_sisgam` DISABLE KEYS */;
+INSERT INTO `tb_unity_sisgam` (`id`, `nome`, `site`, `ref`) VALUES
+	(1, 'Tamancão', 'R. do Apicum, 6-198', 'Próx. Sítio Tamancão'),
+	(2, 'Gancharia', '2a Travessa da Rua Nova', 'Próx. Lanchonete Arena Gancharia'),
+	(3, 'Fumacê', 'Av. Vaticano', 'Próx. Igreja Adventista do Sétimo Dia'),
+	(4, 'Madre deus', 'Av. Sen. Vitorino Freire, S/N', 'Próx. Tribunal Regional Eleitoral MA'),
+	(5, 'Monte Castelo', 'Av. Getúlio Vargas, 04', 'Próx. ao SENAI Monte Castelo'),
+	(6, 'Apeadouro', 'Av. Getúlio Vargas, 88', 'Próx. Igreja São Vicente de Paulo'),
+	(7, 'João Paulo', 'Av. São Marçal, s/n ', 'Prox. ao 24ª BIS Exército Brasileiro'),
+	(8, 'Anil', 'Av. Casemiro Júnior, 12', 'Próx. a Faculdade CEST'),
+	(9, 'Lima Verde', 'Estrada de Ribamar, MA-201, Km-05', 'Próx. Pátio Norte Shopping');
+/*!40000 ALTER TABLE `tb_unity_sisgam` ENABLE KEYS */;
+
+-- Dumping structure for table db_sisgam_emserf.tb_user_sisgam
+CREATE TABLE IF NOT EXISTS `tb_user_sisgam` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=230 DEFAULT CHARSET=utf8mb3;
+
+-- Dumping data for table db_sisgam_emserf.tb_user_sisgam: ~20 rows (approximately)
+DELETE FROM `tb_user_sisgam`;
+/*!40000 ALTER TABLE `tb_user_sisgam` DISABLE KEYS */;
+INSERT INTO `tb_user_sisgam` (`id`, `email`) VALUES
+	(18, 'alberico@emserf.com'),
+	(17, 'alexandre@emserf.com'),
+	(19, 'claudio@emserf.com'),
+	(4, 'diego@emserf.com'),
+	(14, 'erik@emserf.com'),
+	(8, 'evaldinolia@emserf.com'),
+	(7, 'eveline@emserf.com'),
+	(13, 'flavio@emserf.com'),
+	(1, 'jailson@emserf.com'),
+	(11, 'joaocarlos@emserf.com'),
+	(9, 'josenildo@emserf.com'),
+	(15, 'josias@emserf.com'),
+	(16, 'juciana@emserf.com'),
+	(12, 'mauro@emserf.com'),
+	(3, 'odival@emserf.com'),
+	(20, 'omar@emserf.com'),
+	(6, 'osvaldo@emserf.com'),
+	(5, 'santiago@emserf.com'),
+	(2, 'yullano@emserf.com');
+/*!40000 ALTER TABLE `tb_user_sisgam` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;

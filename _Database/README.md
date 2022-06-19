@@ -9,6 +9,6 @@
 Utilizamos o HeidiSQL para desenvolver e modelar o banco de dados e o MySQL para Engenharia Reversa conforme Diagrama ER abaixo:
 
 <h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/172031325-a43e4e7b-e4e6-4ea2-9824-c2737e6f8a63.png" width="600px" /></br>
+<img src="https://user-images.githubusercontent.com/40738499/174459986-51a0ca55-29c8-4a44-97c7-c9e1262649a3.PNG" width="600px" /></br>
 </h5>
 

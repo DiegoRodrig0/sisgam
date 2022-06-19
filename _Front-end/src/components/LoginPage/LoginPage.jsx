@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useContext } from 'react';
 import { AuthContext } from '../Context/Auth';
 import './LoginPage.css';
@@ -19,7 +18,7 @@ const LoginPage = () => {
         <div id="login">
             <form className="form" onSubmit={handleSubmit}>
                 <br /><br />
-                <p> <img src="/EMSERF.png" width={240} /></p>
+                <p> <img src="/emserf-logo.png" width={240} /></p>
                 <div className="field">
                     <br />
                     <label htmlFor='email'>Email</label>

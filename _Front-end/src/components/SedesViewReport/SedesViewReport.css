@@ -1,0 +1,12 @@
+.sedesGrid {
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-row-gap: 5px;
+    grid-column-gap: 20px;
+    /* background-color: #dbe0e6; */
+    background-color: whitesmoke;
+    align-items: center;
+}
