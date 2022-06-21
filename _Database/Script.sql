@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `tb_map_sisgam` (
   CONSTRAINT `fk_receiversede_sede` FOREIGN KEY (`sede_id`) REFERENCES `tb_unity_sisgam` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=380 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_sisgam_emserf.tb_map_sisgam: ~23 rows (approximately)
+-- Dumping data for table db_sisgam_emserf.tb_map_sisgam: ~27 rows (approximately)
 DELETE FROM `tb_map_sisgam`;
 /*!40000 ALTER TABLE `tb_map_sisgam` DISABLE KEYS */;
 INSERT INTO `tb_map_sisgam` (`id`, `receiver_id`, `sede_id`) VALUES
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `tb_unity_sisgam` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_sisgam_emserf.tb_unity_sisgam: ~15 rows (approximately)
+-- Dumping data for table db_sisgam_emserf.tb_unity_sisgam: ~9 rows (approximately)
 DELETE FROM `tb_unity_sisgam`;
 /*!40000 ALTER TABLE `tb_unity_sisgam` DISABLE KEYS */;
 INSERT INTO `tb_unity_sisgam` (`id`, `nome`, `site`, `ref`) VALUES
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `tb_user_sisgam` (
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=230 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_sisgam_emserf.tb_user_sisgam: ~20 rows (approximately)
+-- Dumping data for table db_sisgam_emserf.tb_user_sisgam: ~0 rows (approximately)
 DELETE FROM `tb_user_sisgam`;
 /*!40000 ALTER TABLE `tb_user_sisgam` DISABLE KEYS */;
 INSERT INTO `tb_user_sisgam` (`id`, `email`) VALUES
