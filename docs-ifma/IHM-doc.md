@@ -44,7 +44,12 @@ Empresas de grande porte que trabalham com manutenção, logística, gerenciamen
 Nesse contexto, temos o cenário da **EMSERF** *Empresa Maranhense de Serviços Ferroviários*, que já possui um **Sistema Core** que gerencia toda a organização, e este possui um endpoint para gerar alertas de manutenção e atualização de estoque por e-mail, todavia o banco de dados que informa os técnicos que recebem alerta é atualizado manualmente. Isso se deve ao fato da empresa ter feito apenas a aquisição do ***serviço de envio de alertas sem comprar a interface*** (que na ocaisão teria um custo bastante elevado), por conta desse desvio a equipe de operações passou a seguir o seguinte fluxo: 
 O setor de manutenção manda um *"Planilhão de Excel"* semanalmente com a relação de técnicos, por conseguinte, também de forma manual, o Administrador de Banco de Dados escreve consultas SQL (INSERT/UPDATE/DELETE) diretamente na base de dados, com os técnicos que, de fato, devem receber os alertas. Isso gera desgaste, sujeição à falha humana e sobretudo impacto direto no SLA das demandas do time de desenvolvimento EMSERF.
 
-Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas de Manutenção**. Reiteramos que, o SISGAM não substitui o SISCORE, ele é apenas uma **Aplicação Satélite** desenvolvida especialmente para automatizar o processo e reduzir custos de implementação do fabricante do SISCORE.
+Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas de Manutenção**. Reiteramos que, o SISGAM não substitui o SISCORE, ele é apenas uma **Aplicação Satélite** desenvolvida especialmente para automatizar o processo e reduzir custos de implementação do fabricante do SISCORE, conforme diagram abaixo:
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/175784007-abc51aea-0a5f-4a59-ba36-1ca939e0efbc.png" width="700px" />
+	<p>Diagrama da Solução</p>
+</div>
 
 ## Público Alvo:
 
@@ -269,13 +274,11 @@ Requisitos não funcionais por sua vez definem o que o sistema fará, como cada 
 
 
 ---
-### Links de acesso ao Protótipo e Formulário da Pesquisa de Experiência:
 
-A criação do protótipo foi feita com a Tecnologia Figma, software recomendado pela professora Eveline Sá, onde pudemos gerar um modelo de Alta Fidelidade. Conforme links a seguir:
+## Seção 5.
+### Prototipação:
 
-<a href="https://www.figma.com/file/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=0%3A1"> **Protótipo Horizontal** </a> <br/>
-<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **Demo** </a> <br/>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeNK915CZaDpIhgumv9YWdxGEW-oY90FjKTZW1briknAPw7pA/viewform"> **Pesquisa UX** </a> <br/>
+A criação do protótipo foi feita com a Tecnologia Figma, software recomendado pela professora Eveline Sá, onde pudemos gerar um modelo de Alta Fidelidade.
 
 Os componentes IHC analisados e utilizados foram: 
 
@@ -347,11 +350,19 @@ O sistema tem um ótimo modelo conceitual, evitando que o usuário opere cegamen
 
 ---
 
-### Resultados da Pesquisa UX:
+## Seção 6.
 
-*Kink *
+### Pesquisa UX:
 
-Principais oportunidades de melhoria.
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeNK915CZaDpIhgumv9YWdxGEW-oY90FjKTZW1briknAPw7pA/viewform"> **Formulário da Pesquisa** </a> <br/>
+<a href="https://docs.google.com/forms/d/1uoUeZNKSXIeKx9c8seaA5VYIKzpwjhWXilgovIvwZgo/viewanalytics"> **Resultados da Pesquisa** </a> <br/>
+Principais oportunidades de melhoria:
+X, y, z...
 
+---
 
+## Seção 7.
+### Protótipo Final:
 
+<a href="https://www.figma.com/file/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=0%3A1"> **Protótipo Melhorado** </a> <br/>
+<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **Demo** </a> <br/>
