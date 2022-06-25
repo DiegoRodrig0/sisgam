@@ -28,9 +28,9 @@ CREATE TABLE IF NOT EXISTS `tb_map_sisgam` (
   KEY `fk_receiversede_receiver_idx` (`receiver_id`),
   CONSTRAINT `fk_receiversede_receiver` FOREIGN KEY (`receiver_id`) REFERENCES `tb_user_sisgam` (`id`),
   CONSTRAINT `fk_receiversede_sede` FOREIGN KEY (`sede_id`) REFERENCES `tb_unity_sisgam` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=380 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=384 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_sisgam_emserf.tb_map_sisgam: ~27 rows (approximately)
+-- Dumping data for table db_sisgam_emserf.tb_map_sisgam: ~9 rows (approximately)
 DELETE FROM `tb_map_sisgam`;
 /*!40000 ALTER TABLE `tb_map_sisgam` DISABLE KEYS */;
 INSERT INTO `tb_map_sisgam` (`id`, `receiver_id`, `sede_id`) VALUES
@@ -40,21 +40,21 @@ INSERT INTO `tb_map_sisgam` (`id`, `receiver_id`, `sede_id`) VALUES
 	(3, 3, 3),
 	(4, 4, 4),
 	(5, 5, 9),
+	(383, 6, 2),
 	(366, 6, 9),
 	(21, 7, 4),
 	(368, 7, 5),
 	(7, 7, 9),
+	(382, 8, 2),
 	(8, 8, 8),
 	(9, 9, 1),
 	(12, 12, 6),
-	(13, 13, 2),
 	(14, 14, 3),
 	(15, 15, 4),
 	(169, 16, 3),
 	(16, 16, 5),
 	(369, 17, 5),
 	(17, 17, 6),
-	(374, 18, 2),
 	(370, 18, 5),
 	(18, 18, 8),
 	(365, 19, 1),

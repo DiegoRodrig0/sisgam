@@ -34,18 +34,42 @@ conexão remota precisa de uma porta TCP, e o próprio protocolo TCP designa por
 
 Para tal, é crucial criar o *Arquivo de Configuração*, que simula um ambiente de execução. Ou seja, as variáveis dele sobrescrevem as variáveis de produção. Então podemos usá-lo conforme ambiente (produção, teste, etc). O pacote usado para gerenciar esse processo é o dotenv/npm:
 
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/170852585-8858580e-daa2-44d2-880b-5104741ec69d.png" width="500px" /></br>
-</h5>
+```text
+
+SERVER_PORT=3001
+
+SISGAM_MYSQL_DB_HOST=127.0.0.1
+SISGAM_MYSQL_DB_USER=root
+SISGAM_MYSQL_DB_PASSWORD=root
+SISGAM_MYSQL_DB_PORT=33060
+SISGAM_MYSQL_DB_SCHEMA=db_sisgam_emserf
+
+```
 
 ---
 
 ### **Conexão com o Banco de Dados**:
 Nas configurações do Banco de Dados MySQL, usamos uma interface para um conector oficial do MySQL: @mysql/xdevapi.
 
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/170852686-8e4a4830-c999-4cc8-b96e-6bebb892cdae.png" width="650px" /></br>
-</h5>
+```js
+require('dotenv').config({ path: 'config.env' });
+const mysqlx = require('@mysql/xdevapi');
+const dbClient = function () { };
+
+async function getConnection() {
+    const config = {
+        password: process.env.SISGAM_MYSQL_DB_PASSWORD,
+        user: process.env.SISGAM_MYSQL_DB_USER,
+        host: process.env.SISGAM_MYSQL_DB_HOST,
+        port: parseInt(process.env.SISGAM_MYSQL_DB_PORT),
+        schema: process.env.SISGAM_MYSQL_DB_SCHEMA
+    }     
+    return mysqlx.getSession(config);
+}
+
+dbClient.getConnection = getConnection;
+module.exports = dbClient;
+```
 
 ---
 
@@ -54,25 +78,108 @@ Nas configurações do Banco de Dados MySQL, usamos uma interface para um conect
 As rotas precisam ser registradas antes da aplicação ouvir. Logo, além de definí-las, é necessário exportá-las.
 As actions efetivamente, são feitas por Controllers. A seguir temos alguns exemplos de Models, Controlers e Rotas criadas por contexto:
 
-**Contexto de Unidades de Manutenção:**</br>
-*Model unity*
 
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/170852416-3ec16021-0d1d-4a6d-b858-0f04da31cf6f.png" width="650px" /></br>
-</h5>
+*Model UNITY*
 
-*Controller unity*
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/170852488-635d09f2-15c1-430e-91d8-03cf983b7dcc.png" width="650px" /></br>
-</h5>
+```js
+const sisgamDb = require('../repository/sisgamDb');
+const Unity = function () { };
+
+Unity.getAllUnits = async function () {
+    const connection = await sisgamDb.getConnection();
+    const query = connection.sql('SELECT id, nome, site FROM tb_unity_sisgam ORDER BY site');
+
+    let data = [];
+    try {
+        data = await query.execute();
+    }
+    catch (ex) {
+        if (connection)
+            connection.close();
+        throw ex;
+    }
+    connection.close();
+    return data.fetchAll();
+}
+
+module.exports = Unity;
+```
 
 
-### **Rotas**:
+*Controller MAP*
+
+```js
+const User = require('../model/sisgam_user_model');
+const Map = require('../model/sisgam_map_model');
+
+async function bindMap(req, res) {
+    if (req.body && req.body.email && req.body.sedeId) {
+        try {
+            let email = req.body.email;
+            let sede_id = req.body.sedeId;
+            if (email) {
+                let receiver_id = await User.findIdByEmail(email);
+                if (receiver_id === -1) {
+                    receiver_id = await User.insertUsers(email);
+                }
+
+                await Map.insertUserByUnity(receiver_id, sede_id);
+                res.status(200).send({msg: "✅ Email vinculado com sucesso!"});
+            }
+            else {
+                res.status(500).send({ error: 'A propriedade email precisa estar no domínio @emserf.com' });
+            }
+        }
+        catch (ex) {                        
+            res.status(500).send({ error: "⚠️ Email já está vinculado a esta unidade!" });
+        }
+    }
+    else {
+        res.status(500).send({ error: '⚠️ Você precisa informar o email!' });        
+    }
+}
+
+async function getGeneralList(req, res) {
+    try {
+        const response = await Map.getGeneralList();
+        res.status(200).send(response);
+    }
+    catch (ex) {
+        res.status(500).send({ error: ex });
+    }
+}
+
+exports.bindMap = bindMap;
+exports.getGeneralList = getGeneralList;
+```
+
 
 Munidos de Models e Controllers, construimos o componente *Routes*, vide abaixo:
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/170853830-6b81e1a9-cca6-4a95-870e-b31c215a8e88.png" width="650px" /></br>
-</h5>
+
+```js
+const Sisgam_Unity_Controller = require('../controller/sisgam_unity_controller');
+const Sisgam_User_Controller = require('../controller/sisgam_user_controller');
+const Sisgam_Map_Controller = require('../controller/sisgam_map_controller');
+
+module.exports = async function (app) {
+    //================================== UNITY ROUTES ==============================================
+    app.route('/sisgam_unity/deleteUsersByUnity').post(Sisgam_Unity_Controller.deleteUsersByUnity);
+    app.route('/sisgam_unity/insertUserByUnity').post(Sisgam_Unity_Controller.insertUserByUnity);
+    app.route('/sisgam_unity/getUsersByUnity').post(Sisgam_Unity_Controller.getUsersByUnity);
+    app.route('/sisgam_unity/getUnityDetails').post(Sisgam_Unity_Controller.getUnityDetails);
+    app.route('/sisgam_unity/getUserDetails').post(Sisgam_Unity_Controller.getUserDetails);
+    app.route('/sisgam_unity/getCountUsers').get(Sisgam_Unity_Controller.getCountUsers);
+    app.route('/sisgam_unity/getAllUnits').get(Sisgam_Unity_Controller.getAllUnits);
+
+    //================================== USER ROUTES ====================================
+    app.route('/sisgam_user/insertUsers').post(Sisgam_User_Controller.insertUser);
+    app.route('/sisgam_user/getAllUsers').get(Sisgam_User_Controller.getAllUsers);
+    app.route('/sisgam_user/bindMap').post(Sisgam_Map_Controller.bindMap);
+
+    //================================== MAP ROUTES =================================   
+    app.route('/sisgam_map/getGeneralList').get(Sisgam_Map_Controller.getGeneralList);
+}
+```
 
 ---
 
@@ -81,4 +188,10 @@ Munidos de Models e Controllers, construimos o componente *Routes*, vide abaixo:
 
 <!-- ### IMPORTANTE: 
 *O bom programador, ao documentar o comportamento da API durante requisições HTTP, usa o 'Index' pra "logar" o feedback no console da API e
-a 'Controller' para "logar" no console do cliente. Assim a manutenção da aplicação torna mais fácil a rastreabilidade/mapeamento de erros.* -->
+a 'Controller' para "logar" no console do cliente. Assim a manutenção da aplicação torna mais fácil a rastreabilidade/mapeamento de erros.* 
+
+```js
+
+```
+
+-->

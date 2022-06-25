@@ -22,7 +22,7 @@ async function insertUser(req, res) {
                 res.status(200).send({ id: id });
             }
             else {
-                res.status(500).send({ error: 'The property email must be in the domain @vale.com!' });
+                res.status(500).send({ error: 'The property email must be in the domain @emserf.com!' });
             }
         }
         catch (ex) {
