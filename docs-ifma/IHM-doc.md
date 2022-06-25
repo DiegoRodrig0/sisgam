@@ -356,8 +356,14 @@ O sistema tem um ótimo modelo conceitual, evitando que o usuário opere cegamen
 
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNK915CZaDpIhgumv9YWdxGEW-oY90FjKTZW1briknAPw7pA/viewform"> **Formulário da Pesquisa** </a> <br/>
 <a href="https://docs.google.com/forms/d/1uoUeZNKSXIeKx9c8seaA5VYIKzpwjhWXilgovIvwZgo/viewanalytics"> **Resultados da Pesquisa** </a> <br/>
+
 Principais oportunidades de melhoria:
-X, y, z...
+
+Cruzando as estatísticas fornecidas pela pesquisa supracitada com os requisitos e demandas do sistema em questão determinamos que as principais orpotunidades de melhoria do sistema se referem aos aspectos da plataforma que permitem ao usuário compreender o que ele está fazendo, bem como a finalidade de cada uma das funções a sua disposição, evitando assim que o mesmo se sinta perdido diante das diferentes telas e opções disponibilizadas.
+
+A primeira oportunidade para melhoria envolve adotar uma das sugestões realizadas por um dos participantes da pesquisa: a utilização de _tooltips_ nos botões e links do sistema, detalhando a finalidade de cada um deles antes que sejam clicados, bastando que se mantenha o cursor do mouse sobre os mesmos. Com base nessa idéia também cogitamos um botão com ícone de ponto de interrogação <?> no canto superior direito de algumas telas. Ao serem clicados tais botões podem abrir um pop-up ou tooltip contendo detalhes mais extensos da função ou finalidade de uma dada seção da plataforma.
+
+Por fim, pode-se ponderar a adição de uma tela que apresente um _mapa do sistema_ e/ou mesmo um manual do sistema, instruindo o usuário com dificuldades para que o mesmo não se sinta perdido entre as diferentes telas e funções do sistema. Porém cabe ressaltar aqui que o escopo da plataforma é ser utilizada na empresa que demandou o desenvolvimento do mesmo, visando automatizar algumas tarefas necessárias no trabalho cotidiano de um setor específico da organização. Com efeito é de se esperar que a implementação do sistema na empresa venha acompanhado de um treinamento da equipe, inicialmente instruídos por algum membro da equipe de desenvolvedores. Futuramente a mesma capacitação pode ser realizada pelos funcionários veteranos aos funcionários mais novos.
 
 ---
 
