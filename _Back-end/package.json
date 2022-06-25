@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/yullano90/emserf_service_map_manager"
   },
-  "author": "Automação Eletro",
+  "author": "Equipe de TI @EMSERF",
   "license": "ISC",
   "dependencies": {
     "@mysql/xdevapi": "^8.0.27",

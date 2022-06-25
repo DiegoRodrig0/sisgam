@@ -58,20 +58,20 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
   SUMÁRIO </br></br>
  </h3>
  
-<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **INTRODUÇÃO** </a>
+<a href=" "> **INTRODUÇÃO** </a>
 
 		Demanda do Cliente EMSERF
 		Identificação dos requisitos
 		Prioridades dos requisitos
 
-<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA** </a>
+<a href=" "> **CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA** </a>
 
 		Abrangência e sistemas relacionados
 		Descrição dos usuários
 		Nome do tipo específico de usuário
 		Nome do tipo específico de usuário
 
-<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)** </a>
+<a href=" "> **CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)** </a>
 	
 		Nome de subseção para agrupar casos de uso correlacionados
 		Nome do caso de uso
@@ -80,7 +80,7 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
 		[RF…] Nome do outro caso de uso
 		Nome da outra subseção para agrupar outros casos de uso correlacionados
 
-<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS** </a>
+<a href=" "> **CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS** </a>
 
 	
 		Usabilidade
@@ -94,7 +94,7 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
 		Padrões
 		Hardware e Software
 		
-<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO** </a>
+<a href=" "> **CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO** </a>
 
 	Identificador de uma interface
 	Críticas da Interface
@@ -130,14 +130,16 @@ Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas d
 **b)	Autenticação do Usuário**
 O fluxo de Autenticação do SISGAM, à princípio era no formato de assinatura digital com JWT (Json Web Token), todavia conforme realizamos o processo de refinar os requisitos, identificamos que na nossa infraestrutura EMSERF, não precisaríamos deste recurso, uma vez que ao fazer Logon na máquina (S.O), com usuário de rede EMSERF, uma GPO* já roda na sesssão do usuário, dando-lhe privilégios ou não e autenticando sistemas web e desktop. Além do controle de logs para efeito de Auditorias internas.
 
-Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via LocalStorage, onde o utilizando o recurso do próprio navegador é possível realizar a autenticação e mantê-lo na sessão até que efetue logout. Abaixo o componente "Auth.jsx", cuja variável "authenticated" é o termômetro da sessão, dessa forma, componentes que precisam do status da sessão passam a acessá-la em tempo de execução para serem renderizados ou não. Vide abaixo trecho do código de construção do componente "Auth.jsx", responsável pela Autenticação e Gerenciamento de sessão do SISGAM: (figura 2), (figura 3).
+Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via LocalStorage, onde o utilizando o recurso do próprio navegador é possível realizar a autenticação e mantê-lo na sessão até que efetue logout. Abaixo o componente "Auth.jsx", cuja variável "authenticated" é o termômetro da sessão, dessa forma, componentes que precisam do status da sessão passam a acessá-la em tempo de execução para serem renderizados ou não. Vide abaixo trecho do código de construção do componente "Auth.jsx", responsável pela Autenticação e Gerenciamento de sessão do SISGAM.
+
+---
 
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175664238-67f52738-4080-431b-9264-6db78021b15b.gif" width="900px" /></br>
 <p> Estratégia LocalStorage </p>
 </h5>
 
-**c) Tela Principal**
+--- 
 
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175664072-d3a7244a-bbed-48ab-9901-2f58b3bd8d7b.PNG" width="1200px" /></br>
@@ -153,14 +155,14 @@ Sendo assim, **não existe necessidade do sistema ter a funcionalidade "esqueceu
 <p> Figura X </p>
 </h5>
 
+---
+
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175667296-f0ebe8a6-6f5e-4bf0-a77e-6c1aa5161d01.gif" width="900px" /></br>
 <p> Figura X </p>
 </h5>
 
-
-
-Basta clicar  no ultimo icone de extração de dados que a exportação dos dados cadastrais são disponibilizados em arquivos CSV. (figura 9)
+---
 
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175784702-839016ce-fe39-414b-b04a-a01216400dd8.gif" width="900px" /></br>
