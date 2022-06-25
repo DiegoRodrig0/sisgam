@@ -21,8 +21,8 @@
 
 | Link Principal | Professor(a) | Disciplina |
 | ----------- | ---------------------- | ------------------------- |
-| <a href="https://github.com/yullano90/emserf_service_map_manager/blob/master/Documenta%C3%A7%C3%A3o/1.%20Project_IHC.md"> Documento IHM </a> | <a href="https://br.linkedin.com/in/eveline-s%C3%A1-436349162"> **Profa. Dra. Eveline de Jesus Viana Sá** </a> | Interação Homem-Máquina |
-| <a href="https://github.com/yullano90/emserf_service_map_manager/blob/master/Documenta%C3%A7%C3%A3o/2.%20Project_ES.md"> Documento ESOFT </a> | <a href="https://br.linkedin.com/in/danieljr"> **Prof. Dr. Daniel Lima Gomes Junior** </a> | Engenharia de Software  |
+| <a href="https://github.com/yullano90/emserf_service_map_manager/blob/master/Documenta%C3%A7%C3%A3o/IHM-doc.md"> Documento IHM </a> | <a href="https://br.linkedin.com/in/eveline-s%C3%A1-436349162"> **Profa. Dra. Eveline de Jesus Viana Sá** </a> | Interação Homem-Máquina |
+| <a href="https://github.com/yullano90/emserf_service_map_manager/blob/master/Documenta%C3%A7%C3%A3o/ESOFT-doc.md"> Documento ESOFT </a> | <a href="https://br.linkedin.com/in/danieljr"> **Prof. Dr. Daniel Lima Gomes Junior** </a> | Engenharia de Software  |
 
 
 ---

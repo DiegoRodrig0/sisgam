@@ -145,7 +145,7 @@ export default function MiniDrawer(props) {
 
         {/* ================  Rota de Sedes ===================== */}
         <List onClick={(e) => navigate(`/`)}>
-          {['Unidades IFMA'].map((text, index) => (
+          {['Detalhes da Sede'].map((text, index) => (
             <ListItemButton
               key={text}
               sx={{
