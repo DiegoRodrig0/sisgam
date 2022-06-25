@@ -21,7 +21,9 @@ SISTEMAS DE INFORMAÇÃO</br>
 VERSÃO 1.0.0 • JUNHO 2022
  <br/><br/>
 SÃO LUÍS, MARANHÃO </br>
+</br></br></br></br>
 </h5>
+
 </br></br></br></br>
 
 ---
@@ -35,6 +37,14 @@ SÃO LUÍS, MARANHÃO </br>
 JAILSON SOARES CANTANHEDE • Database </br>
 IULANO SILVA DOS SANTOS • Server-side </br>
 ODIVAL QUARESMA NETO • Client-side </br>
+</br></br>
+	
+| Release/Versão | Local | Data |
+| ------------ | ----------------- | ------------------------- |
+| Release vs_0.0.1 | São Luís - MA | 16 de Maio de 2022 |
+| Release vs_0.1.0 | São Luís - MA | 23 de Junho de 2022 |
+| Versão vs_1.0.0 | São Luís - MA | 27 de Junho de 2022 |	
+
 </br></br>
 
 ## Público Alvo:
@@ -95,6 +105,7 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
 <h3 align="center">
   INTRODUÇÃO </br>
  </h3>
+ 
 ## Demanda: 
  
 Empresas de grande porte que trabalham com manutenção, logística, gerenciamento de estoque, etc, geralmente possuem sistemas de informação que geram alertas para suas equipes, seja para manutenção de equipamentos, seja para informar atualização de estoque, manutenções urgentes e etc.
@@ -109,14 +120,11 @@ Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas d
 	<p>Diagrama da Solução</p>
 </div>
 
-
----
-#### Release vs_0.0.1 - São Luís - MA, 16 de Maio de 2022
-#### Release vs_0.1.0 - São Luís - MA, 23 de Junho de 2022
-#### Versão vs_1.0.0 - São Luís - MA, 27 de Junho de 2022
----
-
 </br>
+
+<h3 align="center">
+  DESCRIÇÃO DA INTERFACE COM O USUÁRIO </br>
+ </h3>
 
 
 **b)	Autenticação do Usuário**
