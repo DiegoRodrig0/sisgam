@@ -63,50 +63,6 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
 
 </br>
 
-**2. DESENVOLVIMENTO  DO  PROJETO**
-
-**2.1 Tecnologia  Envolvida**
-
-Para a diagramação da arquitetura e prototipagem de interface do app, foi utilizaado o Draw.io, Bizagi Modeler, jentamente com o Figma.
-
-No desenvolvimento da interface e da API com a Stack Javascript, utilizaram-se o React JS e o Node Js.
-
-Para o paoio no controle do product backlog e gerenciamento de tascks foi utilizado o Github Projects.
-
-A  ferramenta  utilizada  para  gerenciar  o  banco  de  dados  do  sistema  foi  o  MySQL  WorkBench  8.0, juntamente com o Wampserve para criar um ambiente que falicita a configuração dos software interpretador de scriptes. O diagrama relacional foi desenvolvido no proprio MySQL, atraves da engenharia reversa, mostrando a relação entre os diagramas e suas comunicações.
-
-  
-
-**2.1 Análise  e  Levantamento  de  Requisitos**
-
-O projeto teve início com a elaboração do levantamento de requisitos do sistema, onde foi  possível levantar todas as necessidades e sugestões do cliente. O objetivo principal  esteve focado na criação, em um único ambiente, de um sistema integrado que gerencie a manutenção de equipamentos e atualização de estoque de empresas ferroviarias.
-
- 1. Tela de LOGIN; 
- 2. Botões logicos como: Unidades, Exportação de dados, Logout; 
- 3. Quadro de unidades
- 4. Quadro de tecnicos
- 5. Inclusão e Exclusão de Tecnicos
- 6. Banco de Dados
-
-Durante o levantamento de requisitos foi identificado que para gerar o detalhamento da unidade seria necessário que os funcionários estivessem cadastrados no sistema, assim identificando quem opera na ferrovia e detalhando o cargo exercido por cada um, sendo assim foram criadas as seguintes funcionalidades:
-
- - a)	Autenticação de login – A identificação dos diferentes atores que tem acesso ao SISGAM se dá a partir das credencias de login. 
-   b)	Unidades IFMA – Detalha todas as unidades vinculadas na aplicação, mostrando o quadro de funcionários, tendo a opção de cadastrar e excluir os mesmos.
-   c)	Export Excel – Possibilita que o usuario possa fazer um download no formato CSV, de informações sobre determinados campo ferroviario. 
-   d)	Logout – Ação na qual o usuario sai do aplicativo de forma segura.
-
-**2.3	Desenvolvimento do Sistema**
-
-Para o processo de implementação de desenvolvimento do SISGAM, foi necessário que houvesse um planejamento e documentação dos casos de uso dispostos no Documento de Requisitos, para então criar os fluxos de funcionamento do sistema (figura 1). A documentação dos casos de uso serviu para orientar quais recursos deveriam ser elaborados durante o  processo de desenvolvimento do projeto.
-
-![](Images/fig1.png)
-
-**2.4	Atores do Projeto e suas Funcionalidade**
-O sistema é baseado somente em um ator, que é o usuario principal. Pois o cliente não ver a necessidade de ter varios atores, pois o gestor vai operar o sistema de acordo com o que o ponto focal pede, que é a visualização do mapa de serviços e a vinculação e desvinculação de um tecnico.
-
-**2.5	Funcionalidades**
-**a)	Login**
-Funcionalidade que permite acesso ao sistema. Os campos LOGIN e SENHA deverão ser preenchidos de acordo com as credenciais que o usuário recebe. Ao Clicar em ENTRAR, o funcionário terá acesso ao sistema, onde serão disponibilizadas as funções da aplicação.
 
 **b)	Autenticação do Usuário**
 O fluxo de Autenticação do SISGAM, à princípio era no formato de assinatura digital com JWT (Json Web Token), todavia conforme realizamos o processo de refinar os requisitos, identificamos que na nossa infraestrutura EMSERF, não precisaríamos deste recurso, uma vez que ao fazer Logon na máquina (S.O), com usuário de rede EMSERF, uma GPO* já roda na sesssão do usuário, dando-lhe privilégios ou não e autenticando sistemas web e desktop. Além do controle de logs para efeito de Auditorias internas.
@@ -118,14 +74,6 @@ Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via 
 <p> Figura X </p>
 </h5>
 
-
-
-<img src="Images/fig2.jpg" width="400" >
-
-<img src="Images/fig3.jpg" width="400" >
-
-GPO é uma política de grupo que determina o conjunto de configurações e diretrizes para alterações simultâneas nas operações informatizadas de uma empresa, de forma que as tornem mais práticas e ágeis. Um bom exemplo é uma rede intranet, na qual é preciso gerenciar os acessos e a utilização das funções disponíveis. (figura4)
-
 **c) Tela Principal**
 
 <h5 align="center">
@@ -136,10 +84,6 @@ GPO é uma política de grupo que determina o conjunto de configurações e dire
 **Importante considerarmos que os usuários da EMSERF, utilizam a mesma senha pra logar em qualquer sistema web ou desktop**. Uma vez autenticado na rede corporativa, ou seja, ao seja, **Logon no Sistema Operacional, um script é carregado no servidor tratando privilégios e diretrizes de segurança**.
 Sendo assim, **não existe necessidade do sistema ter a funcionalidade "esqueceu sua senha?"**. Além disso como todo bom sistema, há o fluxo de captura de logs, gerado automaticamente para fins de auditoria e **Política Antifraude.**
 
-**d) Detalhamento de Unidade**
-
-Com o login feito, o sistema vai mostrar o menu no canto esquerdo disponibilizando algumas funcionalidades, juntamente com as unidades ferroviarias vinculadas ao aplicativo. (figura 5)
-Ao detalhar uma unidade ela mostra os técnicos vinculados a ela, possibilitando a inclusão e exclusão dos mesmos.(figura 6), (figura 7), (figura 8).
 
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175666173-03d54c32-c66b-4b89-8ae3-e522cc38a3d7.gif" width="900px" /></br>
@@ -151,15 +95,12 @@ Ao detalhar uma unidade ela mostra os técnicos vinculados a ela, possibilitando
 <p> Figura X </p>
 </h5>
 
-**e) Extração de dados**
+
 
 Basta clicar  no ultimo icone de extração de dados que a exportação dos dados cadastrais são disponibilizados em arquivos CSV. (figura 9)
 
 <h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/175667554-a35cd6d3-d068-4c3b-b811-aeb809b83520.gif" width="900px" /></br>
+<img src="https://user-images.githubusercontent.com/40738499/175784702-839016ce-fe39-414b-b04a-a01216400dd8.gif" width="900px" /></br>
 <p> Figura X </p>
 </h5>
 
-**3. CONSIDERAÇÕES  FINAIS**
-
-O presente projeto foi possível colocar em prática grande parte do conteúdo teórico  das disciplinas Interação Humano-Computador, Engenharia de Software, Linguagem de  Programação  e  Banco  de  Dados,  bem  como  foi  possível  resolver  parte  do  problema  vivenciado por uma empresa, que depende de uma aplicação para fazer o monitoramento e reparo de seus equipamentos.
