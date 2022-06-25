@@ -30,13 +30,71 @@ SÃO LUÍS, MARANHÃO </br>
   FICHA TÉCNICA </br>
  </h3>
 
-**Equipe Responsável pela Elaboração**
+##  Equipe Responsável pela Elaboração:
 
 JAILSON SOARES CANTANHEDE • Database </br>
 IULANO SILVA DOS SANTOS • Server-side </br>
 ODIVAL QUARESMA NETO • Client-side </br>
 </br></br>
 
+## Público Alvo:
+
+Este manual destina-se aos gestores e pontos focais da equipe técnica de Manutenção Ferroviária do cliente EMSERF, dando-lhes o conhecimento necessário para operar em uma interface Web capaz de definir, em tempo real, quais profissionais devem receber alertas de manutenção em sua região de atuação.
+</br></br></br></br>
+
+---
+
+<h3 align="center">
+  SUMÁRIO </br></br>
+ </h3>
+ 
+<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **INTRODUÇÃO** </a>
+
+		Demanda do Cliente EMSERF
+		Identificação dos requisitos
+		Prioridades dos requisitos
+
+<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA** </a>
+
+		Abrangência e sistemas relacionados
+		Descrição dos usuários
+		Nome do tipo específico de usuário
+		Nome do tipo específico de usuário
+
+<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)** </a>
+	
+		Nome de subseção para agrupar casos de uso correlacionados
+		Nome do caso de uso
+		Fluxo de eventos principal
+		Fluxos secundários (alternativos e de exceção)
+		[RF…] Nome do outro caso de uso
+		Nome da outra subseção para agrupar outros casos de uso correlacionados
+
+<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS** </a>
+
+	
+		Usabilidade
+		[NF001] Nome do requisito
+		Confiabilidade
+		[NF001] Nome do requisito
+		Desempenho
+		[NF001] Nome do requisito
+		Segurança
+		Distribuição
+		Padrões
+		Hardware e Software
+		
+<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO** </a>
+
+	Identificador de uma interface
+	Críticas da Interface
+	Indetificador de outra interface
+	Críticas da Interface
+---
+
+<h3 align="center">
+  INTRODUÇÃO </br>
+ </h3>
 ## Demanda: 
  
 Empresas de grande porte que trabalham com manutenção, logística, gerenciamento de estoque, etc, geralmente possuem sistemas de informação que geram alertas para suas equipes, seja para manutenção de equipamentos, seja para informar atualização de estoque, manutenções urgentes e etc.
@@ -47,13 +105,10 @@ O setor de manutenção manda um *"Planilhão de Excel"* semanalmente com a rela
 Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas de Manutenção**. Reiteramos que, o SISGAM não substitui o SISCORE, ele é apenas uma **Aplicação Satélite** desenvolvida especialmente para automatizar o processo e reduzir custos de implementação do fabricante do SISCORE, conforme diagrama abaixo:
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/40738499/175784007-abc51aea-0a5f-4a59-ba36-1ca939e0efbc.png" width="700px" />
+<img src="https://user-images.githubusercontent.com/40738499/175784007-abc51aea-0a5f-4a59-ba36-1ca939e0efbc.png" width="800px" />
 	<p>Diagrama da Solução</p>
 </div>
 
-## Público Alvo:
-
-Este manual destina-se aos gestores e pontos focais da equipe técnica de Manutenção Ferroviária do cliente EMSERF, dando-lhes o conhecimento necessário para operar em uma interface Web capaz de definir, em tempo real, quais profissionais devem receber alertas de manutenção em sua região de atuação.
 
 ---
 #### Release vs_0.0.1 - São Luís - MA, 16 de Maio de 2022
@@ -71,7 +126,7 @@ Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via 
 
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175664238-67f52738-4080-431b-9264-6db78021b15b.gif" width="900px" /></br>
-<p> Figura X </p>
+<p> Estratégia LocalStorage </p>
 </h5>
 
 **c) Tela Principal**
