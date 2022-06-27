@@ -143,7 +143,7 @@ Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via 
 
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175664072-d3a7244a-bbed-48ab-9901-2f58b3bd8d7b.PNG" width="1200px" /></br>
-<p> Figura X </p>
+<p> Tela de Login </p>
 </h5>
 
 **Importante considerarmos que os usuários da EMSERF, utilizam a mesma senha pra logar em qualquer sistema web ou desktop**. Uma vez autenticado na rede corporativa, ou seja, ao seja, **Logon no Sistema Operacional, um script é carregado no servidor tratando privilégios e diretrizes de segurança**.
@@ -152,20 +152,20 @@ Sendo assim, **não existe necessidade do sistema ter a funcionalidade "esqueceu
 
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175666173-03d54c32-c66b-4b89-8ae3-e522cc38a3d7.gif" width="900px" /></br>
-<p> Figura X </p>
+<p> Acessando o Dashboard </p>
 </h5>
 
 ---
 
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175667296-f0ebe8a6-6f5e-4bf0-a77e-6c1aa5161d01.gif" width="900px" /></br>
-<p> Figura X </p>
+<p> Gerenciando as Unidades </p>
 </h5>
 
 ---
 
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/175784702-839016ce-fe39-414b-b04a-a01216400dd8.gif" width="900px" /></br>
-<p> Figura X </p>
+<p> Exportando Tabela </p>
 </h5>
 
