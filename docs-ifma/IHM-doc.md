@@ -141,17 +141,16 @@ Uma outra possibilidade de utilização são nas movimentações de emergência,
 **b) Dashboard:** </br>
 Uma vez autenticado, usuário acessa a rota default da aplicação, que é um *dashbord* simples contendo um grid de cards, com todas as sedes de manutenção da EMSERF e seus respectivos técnicos distribuídos em campo.
 
-Nos baseamos no padrão Google Classroom, pois é um modelo de interface altamente intuitiva e muito simples, desta forma a experiência do nosso usuário tende a ser excelente, onde poderá cliclar é um cartão e ir até a sede que deseja para vincular ou desvincular profissionais para receber alertas.
+A construção da interface se baseou no padrão Google Classroom, pois é um modelo de interface altamente intuitiva e muito simples, desta forma a experiência do nosso usuário tende a ser excelente, onde poderá cliclar é um cartão e ir até a sede que deseja para vincular ou desvincular profissionais para receber alertas.
 
 **c) Detalhes da Sede:** </br>
 Cada cartão possui um botão chamado "Detalhes da Sede", cujo clique redireciona para uma matriz de dados, contendo os técnicos daquela sede selecionada e as opções de vincular e desvincular profissionais.
 
 **d) Menu Retrátil:** </br>
 Fica disponível durante a navegação um Menu Lateral Retrátil, onde o usuário pode navegar facilmente entre páginas. Neste menu o usuário poderá:
-
-Retornar ao *dashbord* assim que desejar;
-Exportar a síntese das movimentações realizadas para um arquivo .csv;
-Deslogar do sistema;
+- Retornar ao *dashbord*;
+- Exportar a síntese das movimentações realizadas;
+- Deslogar do sistema;
 
 Esses recursos foram pensados não apenas por estética, mas sobretudo para otimizar o tempo do usuário, fazendo com que o mesmo não precise "pensar muito" no que vai clicar pra atingir determinado objetivo.
 
@@ -284,7 +283,7 @@ Os componentes IHC analisados e utilizados foram:
 
 **Sistema de significados:** 
 
-- Utilizamos ícones em várias partes da interface, reduzindo a máximo o volume de textos, tornando a comunicação limpa e sobretudo que usuário não tenha que "pensar muito" onde precisa clicar pra atingir determinado objetivo. Essa relação simbólica foi usada de forma simples e respeitando seus significados, visando uma interpretação clara, partindo do ponto que os ícones estão sujeitos a interpretações individuais de cada pessoa, e por conseguintes atribuimos a eles funcionalidades coerentes.</br>
+- Utilizamos ícones em várias partes da interface, reduzindo a máximo o volume de textos, tornando a comunicação limpa e sobretudo que para o usuário seja intuitivo onde precisa clicar pra atingir determinado objetivo. Essa relação simbólica foi usada de forma simples e respeitando seus significados, visando uma interpretação clara, partindo do ponto que os ícones estão sujeitos a interpretações individuais de cada pessoa, e por conseguintes atribuimos a eles funcionalidades coerentes.</br>
 
 </br>A ideia central do sistema foi desde o início conseguir transmitir ao usuário uma clara interpretação baseando-se pelos princípios de design que tratam sobre **Organizar e Comunicar**. 
 
