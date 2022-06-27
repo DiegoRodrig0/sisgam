@@ -41,7 +41,7 @@ ODIVAL QUARESMA NETO • Client-side </br>
  
 Empresas de grande porte que trabalham com manutenção, logística, gerenciamento de estoque, etc, geralmente possuem sistemas de informação que geram alertas para suas equipes, seja para manutenção de equipamentos, seja para informar atualização de estoque, manutenções urgentes e etc.
 
-Nesse contexto, temos o cenário da **EMSERF** *Empresa Maranhense de Serviços Ferroviários*, que já possui um **Sistema Core** que gerencia toda a organização, e este possui um endpoint para gerar alertas de manutenção e atualização de estoque por e-mail, todavia o banco de dados que informa os técnicos que recebem alerta é atualizado manualmente. Isso se deve ao fato da empresa ter feito apenas a aquisição do ***serviço de envio de alertas sem comprar a interface*** (que na ocaisão teria um custo bastante elevado), por conta desse desvio a equipe de operações passou a seguir o seguinte fluxo: 
+Nesse contexto, temos o cenário da **EMSERF** *Empresa Maranhense de Serviços Ferroviários*, que já possui um **Sistema Core** que gerencia toda a organização, e este possui um endpoint para gerar alertas de manutenção e atualização de estoque por e-mail, todavia o banco de dados que informa os técnicos que recebem alerta é atualizado manualmente. Isso se deve ao fato da empresa ter feito apenas a aquisição do ***serviço de envio de alertas sem comprar a interface*** (que na ocasião teria um custo bastante elevado), por conta desse desvio a equipe de operações passou a seguir o seguinte fluxo: 
 O setor de manutenção manda um *"Planilhão de Excel"* semanalmente com a relação de técnicos, por conseguinte, também de forma manual, o Administrador de Banco de Dados escreve consultas SQL (INSERT/UPDATE/DELETE) diretamente na base de dados, com os técnicos que, de fato, devem receber os alertas. Isso gera desgaste, sujeição à falha humana e sobretudo impacto direto no SLA das demandas do time de desenvolvimento EMSERF.
 
 Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas de Manutenção**. Reiteramos que, o SISGAM não substitui o SISCORE, ele é apenas uma **Aplicação Satélite** desenvolvida especialmente para automatizar o processo e reduzir custos de implementação do fabricante do SISCORE, conforme diagram abaixo:
@@ -132,9 +132,9 @@ O sistema é desenvolvido para rodar apenas via browser, pois as pessoas que ir�
 **Vamos destacar atividades de nossos usuários, com base em funcionalidades chave do sistema, assim fica mais fácil mapear cada atividade impactada:**
 
 **a) Login/Autenticação:** </br>
-Funcionalidade que permite o acesso do usuário ao sistema, coletando dele e-mail corporativo e senha. Após a verificação e confirmação do usuário de forma transparente, o servidor da aplicação verifica credenciais e retorna um **token** via backend, que por conseguinte, libera a aplicação. O acesso é disponibilizado pela equipe de TI com uma senha padrão que é resetada (pelo próprio usuário) após primeiro login.
+O acesso a qualquer aplicação web ou desktop dentro da rede corporativa EMSERF é autenticado no logon no sistema operacional, portanto o usuário usa a mesma senha em todos os sistemas.
 
-A partir de então essa atividade tende a ser realizada semanalmente, pois a definiçao dos técnicos e sedes para receber é feita sempre uma reunião que ocorre uma vez por semana com duração entre 20 e 40 minutos, por isso o uso do sistema não impacta nas outras atividades do ponto focal ou gestor.
+Essa atividade tende a ser realizada semanalmente, ou algumas vezes por semana, pois a definiçao dos técnicos e sedes para receber é feita sempre uma reunião que ocorre uma vez por semana com duração entre 20 e 40 minutos, por isso o uso do sistema não impacta nas outras atividades do ponto focal ou gestor.
 
 Uma outra possibilidade de utilização são nas movimentações de emergência, que esporadicamente ocorrem, portanto de fato o ciclo de login na aplicação tende a ser semanal.
 
@@ -201,17 +201,8 @@ Estes podem ser divididos em duas grandes categorias, a saber, __requisitos func
 
 Requisitos funcionais são a materialização de uma necessidade ou solicitação realizada pelo _software_. Estes descrevem os comportamentos básicos do sistema sob condições específicas, seus requisitos de funcionamento e restrições.
 Segue abaixo os requisitos funcionais do sistema em tela:
-| __RF001__                     | Recuperação de Senha                                                                                                                                                                                    |
-|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                               | O sistema deve permitir que usuários mesmo recebendo acesso do time de TI, possam sempre que conveniente resetar sua senha e receber por email um código de confirmação.                                                                                                                                   |
-|  			 __Ator:__                   | Usuário                                                                                                                                                                                           |
-|  			 __Prioridade:__             | Importante                                                                                                                                                                                         |
-|  			 __Entrada e pré-condições__ | Conexão com internet e banco de dados                                                                                                                                                             |
-|  			 __Saída e pós-condições__   |  			 Request para o backend após validações retornar um código para validar a solicitação. 		                                                                                                                                                  |
-|  			 __Fluxo de Eventos:__       | 1. O usuário com senha "esquecida" clica no botão para recuperação de senha; 				 2. O sistema solicita criação de uma id e senha; 				 3. O sistema dispara uma web request para o back-end, que envia para o email corporativo um código de recuperação de senha. 			 		 |
 
-
-| __RF002__                     | Edição da grade de unidades                                                                                                                                                                                                                                                                                                     |
+| __RF001__                     | Edição da grade de unidades                                                                                                                                                                                                                                                                                                     |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                               | O sistema deve permitir que administradores adicionem, editem ou deletem unidades da empresa em uma grade na tela principal.                                                                                                                                                                                                 |
 |  			 __Ator:__                   | Administrador                                                                                                                                                                                                                                                                                                                |
@@ -221,7 +212,7 @@ Segue abaixo os requisitos funcionais do sistema em tela:
 |  			 __Fluxo de Eventos:__       | 1. Administrador loga no sistema e vai para página principal; 2. Administrador clica no ícone de edição nos elementos que representam as unidades da empresa (dispostos em forma de grade); 3. Uma nova tela se abre oferecendo opções para editar detalhes numa unidade específica, há opção para deletar a unidade também. |
 
 
-| __RF003__                     | Gerenciamento de usuários que devem receber alertas                                                                                                                                                                                                                               |
+| __RF002__                     | Gerenciamento de usuários que devem receber alertas                                                                                                                                                                                                                               |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                               | O sistema deve permitir que usuários habilitados possam vincular ou desvincular gerenciando quem de fato deve receber alertas de manutenção.                                                                                                                                                              |
 |  			 __Ator:__                   | Administrador                                                                                                                                                                                                                                |
@@ -231,7 +222,7 @@ Segue abaixo os requisitos funcionais do sistema em tela:
 |  			 __Fluxo de Eventos:__       | 1. O administrador seleciona uma unidade da empresa na tela principal; 2. Na listagem de técnicos da unidade escolhida ele pode então vincular ou desvincular técnicos na sede de manutenção selecionada e a partir de então o sistema core de alertas passa automaticamente a disparar alertas para o usuário vinculado a determinada sede, pois ele enxerga apenas o banco de dados, cumprindo assim o seu papel de "Aplicação Satélite". |
 
 
-| __RF004__                     | Geração de relatório das movimentações realizadas                                                                                                                                                                                                                                                                                                                                                                                              |
+| __RF003__                     | Geração de relatório das movimentações realizadas                                                                                                                                                                                                                                                                                                                                                                                              |
 |-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                               | O sistema deve gerar relatório com arquivo pode ser impresso ou salvo em disco com extensão .csv, com as movimentações realizadas.                                                                                                                                                                                                                                                                                                                   |
 |  			 __Ator:__                   | Usuário                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -253,19 +244,12 @@ Requisitos não funcionais por sua vez definem o que o sistema fará, como cada 
 
 | __Id.:__ | NF002 |
 |---|---|
-| __Categoria:__ | Segurança |
-| __Nome:__ | Autenticação de usuário |
-| __Descrição:__ | As APIs do sistema podem ser acessadas por externamente pelos usuários, este acesso precisa ser seguro com autenticação em nível do servidor e em nível da aplicação. Para autenticação no nível do servidor o IP de cada usuário deve ser cadastrado no servidor web onde o sistema está hospedado. No nível da aplicação a autenticação deve ser realizada através de cadastro dos usuários, com login e senha próprias. A senha deve ser gravada e protegida por meio de um algoritmo de criptografia. |
-| __Prioridade:__ | Essencial |
-
-| __Id.:__ | NF003 |
-|---|---|
 | __Categoria:__ | Compatibilidade |
 | __Nome:__ | Compatibilidade do sistema com navegadores |
 | __Descrição:__ | Uma vez que o sistema é acessado via website, ele deve ser compatível com os principais navegadores – Firefox, Chrome, Internet Explorer e Edge. |
 | __Prioridade:__ | Importante |
 
-| __Id.:__ | NF004 |
+| __Id.:__ | NF003 |
 |---|---|
 | __Categoria:__ | Padrões |
 | __Nome:__ | Divisão arquitetural do sistema em módulos |
