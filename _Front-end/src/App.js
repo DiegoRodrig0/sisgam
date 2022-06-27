@@ -4,9 +4,26 @@ import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import MiniDrawer from "./components/MiniDrawer/MiniDrawer";
 import MessageModal from "./components/MessageModal/MessageModal";
+import Darkmode from 'darkmode-js';
 
 function App() {
+
+  const options = {
+    // bottom: '64px',
+    // right: '32px',
+    // left: '32px',
+    mixColor: '#fff', 
+    backgroundColor: '#fff',
+    buttonColorDark: '#100f2c', 
+    buttonColorLight: '#fff',
+    saveInCookies: false, 
+    label: '🌓',
+    autoMatchOsTheme: true 
+  }
   
+  const darkmode = new Darkmode(options);
+  darkmode.showWidget();
+
   const [modalOpen, setModalOpen] = useState(false);
   const [message, setMessage] = useState('');
 

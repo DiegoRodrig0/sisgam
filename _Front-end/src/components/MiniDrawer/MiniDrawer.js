@@ -19,7 +19,6 @@ import ListItemText from '@mui/material/ListItemText';
 
 import './MiniDrawer.css';
 import LogoutIcon from '@mui/icons-material/Logout';
-import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import WarehouseIcon from '@mui/icons-material/Warehouse';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import { useNavigate } from 'react-router-dom';
@@ -95,6 +94,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 export default function MiniDrawer(props) {
+
   let navigate = useNavigate();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -114,7 +114,7 @@ export default function MiniDrawer(props) {
   }
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }}>  
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -167,7 +167,7 @@ export default function MiniDrawer(props) {
             </ListItemButton>
           ))}
         </List>
-        
+
         {/* ================  Rota Export  ===================== */}
         <List onClick={(e) => navigate(`/userDt/1`)}>
           {['Export Excel'].map((text, index) => (
@@ -191,7 +191,7 @@ export default function MiniDrawer(props) {
               <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           ))}
-        </List>        
+        </List>
 
         {/* ================  Rota Logout ===================== */}
         {/* <List onClick={(e) => navigate(`/login`)}> */}

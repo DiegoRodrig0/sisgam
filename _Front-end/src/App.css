@@ -66,3 +66,17 @@ Footer{
   color: rgb(68, 68, 68);
   font-family: "Roboto","Helvetica","Arial",sans-serif;
 }
+
+.darkmode-layer, .darkmode-toggle {
+  z-index: 500;
+}
+
+button.darkmode-toggle{
+-ms-flex: auto;
+width: 2rem;
+flex: none;
+}
+button.darkmode-layer.darkmode-layer--button{
+  background-color: yellow;
+  flex: none;
+}
