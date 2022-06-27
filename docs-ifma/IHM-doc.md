@@ -149,10 +149,10 @@ Cada cartão possui um botão chamado "Detalhes da Sede", cujo clique redirecion
 **d) Menu Retrátil:** </br>
 Fica disponível durante a navegação um Menu Lateral Retrátil, onde o usuário pode navegar facilmente entre páginas. Neste menu o usuário poderá:
 - Retornar ao *dashbord*;
-- Exportar a síntese das movimentações realizadas;
-- Deslogar do sistema;
+- Exportar a síntese das movimentações;
+- Realizar Logout;
 
-Esses recursos foram pensados não apenas por estética, mas sobretudo para otimizar o tempo do usuário, fazendo com que o mesmo não precise "pensar muito" no que vai clicar pra atingir determinado objetivo.
+Esses recursos foram pensados não apenas por estética, mas sobretudo para otimizar o tempo do usuário, fazendo com que seja intuitivo o caminho que vai clicar pra atingir determinado objetivo.
 
 **e) Logout:** </br>
 O usuário finaliza a sessão, podendo logar assim que desejar.
@@ -173,13 +173,13 @@ Durante o desenvolvimento do projeto é utilizada a tecnologia de edição gráf
 - Os sistemas operacionais Windows, MacOS, diferentes versões do Linux, Docker entre outros podem executar a aplicação e qualquer browser popular incluindo internet explorer 8 ou superior, podem renderizá-la sem problemas de compatibilidade.
 
 **Frontend e Backend**: 
-Escolhemos a Stack Javascript para desenvolver o software, tanto do lado do cliente quanto do lado do servidor, pois é uma tecnologia estável, performática em browser, os frameworks Nodejs (Backend) e Reactjs (Frontend) possuem boa aprovação pelos times de governança de TI dos grandes players de Tecnologia em auditorias cibernéticas, além de ter o suporte de uma das maiores comunidades do planeta.
+Adotou-se a Stack Javascript para desenvolver o software, tanto do lado do cliente quanto do lado do servidor, pois é uma tecnologia estável, performática em browser, os frameworks Nodejs (Backend) e Reactjs (Frontend) possuem boa aprovação pelos times de governança de TI dos grandes players de Tecnologia em auditorias cibernéticas, além de ter o suporte de uma das maiores comunidades do planeta.
 
 **Requisitos básicos para bom funcionamento:**
-- 32GB de armazenamento ou Superior;
+- 32GB de armazenamento ou superior;
 - 2GB de RAM ou superior;
-- Processador Quad-Core ou Superior;
-- Internet de 1 megabyte ou superior;
+- Processador Quad-Core ou superior;
+- Internet de 1 Mb/s ou superior;
 
 **Suporte e Tempo de Entrega da aplicação**:
 A infraestrutura de TI é do próprio cliente EMSERF, e os Desenvolvedores fazem parte também do time de TI EMSERF, sendo assim torna-se mais fácil entender as dores e limitações do cliente, além disso o tempo estimado para desenvolver e entregar a aplicação está entre 08 a 12 semanas (dias corridos expurgando feriados), pois na esteira entram: Prototipagem, Reuniões com o cliente, Frontend, Backend (API), Testes de Estress da app, Testes de aceitação com o cliente, Conteinerização e Deployment do sistema em infratestrutura corporativa EMSERF.
@@ -188,7 +188,6 @@ A infraestrutura de TI é do próprio cliente EMSERF, e os Desenvolvedores fazem
 
 **Dispositivos de Saída:** Dizem respeito a maneira como o conteúdo será exibido para as pessoas interessadas. No caso desse sistema, haverá o uso da tela do monitor do PC ou Notebook para a visualização dos dados que serão mostrados de acordo com o manuseio do software.
 
-**Consideração Importante**: *Quando o cliente EMSERF declara os requisitos, fica claro que nossa aplicação é do tipo "Satélite", ou seja, já existe um Sistema Core, que dispara os alertas, contudo a necessidade está em automatizar o processo de gerenciamento de usuários que de fato devem receber os alertas.*
 
 ---
 ## Seção 4.
@@ -208,7 +207,7 @@ Segue abaixo os requisitos funcionais do sistema em tela:
 |  			 __Prioridade:__             | Essencial                                                                                                                                                                                                                                                                                                                    |
 |  			 __Entrada e pré-condições__ | Conexão com internet e privilégios de administração                                                                                                                                                                                                                                                                          |
 |  			 __Saída e pós-condições__   | Modificação na configuração da grade de unidades                                                                                                                                                                                                                                                                             |
-|  			 __Fluxo de Eventos:__       | 1. Administrador loga no sistema e vai para página principal; 2. Administrador clica no ícone de edição nos elementos que representam as unidades da empresa (dispostos em forma de grade); 3. Uma nova tela se abre oferecendo opções para editar detalhes numa unidade específica, há opção para deletar a unidade também. |
+|  			 __Fluxo de Eventos:__       | 1. Administrador loga no sistema e vai para página principal;<br/> 2. Administrador clica no ícone de edição nos elementos que representam as unidades da empresa (dispostos em forma de grade);<br/> 3. Uma nova tela se abre oferecendo opções para editar detalhes numa unidade específica, há opção para deletar a unidade também. |
 
 
 | __RF002__                     | Gerenciamento de usuários que devem receber alertas                                                                                                                                                                                                                               |
@@ -261,21 +260,20 @@ Requisitos não funcionais por sua vez definem o que o sistema fará, como cada 
 ## Seção 5.
 ### Prototipação:
 
-A criação do protótipo foi feita com a Tecnologia Figma, software recomendado pela professora Eveline Sá, onde pudemos gerar um modelo de Alta Fidelidade.
+A criação do protótipo foi feita com a Tecnologia Figma, software recomendado pela professora Eveline Sá, onde foi possível gerar um modelo de Alta Fidelidade.
 
 Os componentes IHC analisados e utilizados foram: 
 
 **As primitivas:** 
 
-- Arranjo ou layout onde focamos em proporcionar ao usuário um equilíbrio nas telas, distribuindo os elementos de forma balanceada;
-
-- Fundos ou background onde optamos por fundos de telas e janelas com cores neutras, pensando em usuários com desvios visuais como o Daltonismo, Astigmatismo entre outros. Desta forma a aplicação possui dois temas:
+- Arranjo ou layout onde o foco foi em proporcionar ao usuário um equilíbrio nas telas, distribuindo os elementos de forma balanceada;
+- Fundos ou background onde optou-se por fundos de telas e janelas com cores neutras, pensando em usuários com desvios visuais como o Daltonismo, Astigmatismo entre outros. Desta forma a aplicação possui dois temas:
 - *Emserf Theme:* Paleta de cores brandes em referência a bandeira do Maranhão).
 - *Dark Theme:* Cores mais escuras com paletas espefícas para daltônicos e pessoas com sensibilidade a luz.
 
 **Diálogo:** 
 
-- Ação onde o enfoque foi proporcionar ao usuário uma linguagem simples e objetiva e por ser um sistema satélite a resposta é bem rápida; 
+- Ação onde o foco foi proporcionar ao usuário uma linguagem simples e objetiva e por ser um sistema satélite a resposta é bem rápida; 
 
 **Objetos de Interação**: 
 
@@ -283,20 +281,23 @@ Os componentes IHC analisados e utilizados foram:
 
 **Sistema de significados:** 
 
-- Utilizamos ícones em várias partes da interface, reduzindo a máximo o volume de textos, tornando a comunicação limpa e sobretudo que para o usuário seja intuitivo onde precisa clicar pra atingir determinado objetivo. Essa relação simbólica foi usada de forma simples e respeitando seus significados, visando uma interpretação clara, partindo do ponto que os ícones estão sujeitos a interpretações individuais de cada pessoa, e por conseguintes atribuimos a eles funcionalidades coerentes.</br>
+- Utilizou-se ícones em várias partes da interface, reduzindo a máximo o volume de textos, tornando a comunicação limpa e sobretudo que para o usuário seja intuitivo onde precisa clicar pra atingir determinado objetivo. Essa relação simbólica foi usada de forma simples e respeitando seus significados, visando uma interpretação clara, partindo do ponto que os ícones estão sujeitos a interpretações individuais de cada pessoa, e por conseguinte atribuiu-se a eles funcionalidades coerentes.</br>
 
 </br>A ideia central do sistema foi desde o início conseguir transmitir ao usuário uma clara interpretação baseando-se pelos princípios de design que tratam sobre **Organizar e Comunicar**. 
 
-Sobre a organização, visamos ter um layout de tela muito bem definido que conseguisse facilitar a vida do usuário, prezamos por uma boa navegalidade e foco na atenção. Com a comunicação, buscamos uma compreensão clara das ações do sistema, mostrando simplicidade, evitando densidade, ter objetividade e uma clara comunicação visual, utilizando ícones de fácil identificação e interpretação. 
+Sobre a organização, visou-se ter um layout de tela muito bem definido que conseguisse facilitar a vida do usuário, prezamos por uma boa navegabilidade e foco na atenção. Com a comunicação, buscamos uma compreensão clara das ações do sistema, mostrando simplicidade, evitando densidade, ter objetividade e uma clara comunicação visual, utilizando ícones de fácil identificação e interpretação. 
 
-O sistema tem um ótimo modelo conceitual, evitando que o usuário opere cegamente sem conseguir identificar o efeito de suas ações. Temos alguns *padrões em cada frame*, como: as paletas de cores visando dois fatores, abranger usuários com desvios visuais e cores que fizessem referência ao **Maranhão** e um menu lateral com a utilização de ícones de fácil interpretação, buscando uma melhor navegabilidade.
+O sistema tem um ótimo modelo conceitual, evitando que o usuário opere cegamente sem conseguir identificar o efeito de suas ações. Aplicou-se alguns *padrões em cada frame*, como: as paletas de cores visando dois fatores, abranger usuários com desvios visuais e cores que fizessem referência ao **Maranhão** e um menu lateral com a utilização de ícones de fácil interpretação, buscando uma melhor navegabilidade.
 
 **1° Frame:** Uma interface limpa onde o nosso usuário tem acesso ao sistema
 <div align="center">
 <img src="https://user-images.githubusercontent.com/40738499/173443250-97f6e4d5-0fe5-4486-bf06-b5d775076ebc.gif" width="700px" />
 </div>
 
-**2° Frame:** Nessa nossa primeira tela pós login, temos uma interface com janelas buscando os seguintes princípios de design, boa navegabilidade e com bastante foco na atenção; bordas arredondadas visando um layout mais atual, aqui o usuário pode também ter um acesso a informações mais detalhadas de cada sede.
+**2° Frame:** Nessa nossa primeira tela pós login, temos uma interface com janelas buscando os seguintes princípios de design:
+- Boa navegabilidade e com bastante foco na atenção; 
+- Bordas arredondadas visando um layout mais atual;
+- Usuário pode também ter um acesso a informações mais detalhadas de cada sede.
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/40738499/173443445-633714a1-1d59-4110-8f87-f8e04b7fd39d.gif" width="700px" />
@@ -324,7 +325,7 @@ O sistema tem um ótimo modelo conceitual, evitando que o usuário opere cegamen
 </div> -->
 
 
-**6° Frame:** Nesse frame é onde o usuário tem uma visão geral sobre as alocações em cada sede, podendo exportar um documento em Excel ao final de suas ações no sitema.
+**6° Frame:** Nesse frame é onde o usuário tem uma visão geral sobre as alocações em cada sede, podendo exportar um documento (.cvs ou .pdf) ao final de suas ações no sitema.
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/40738499/174424704-b0edc611-7660-43e9-a4f4-40b10d1d791b.gif"width="900px" />
@@ -342,9 +343,9 @@ O sistema tem um ótimo modelo conceitual, evitando que o usuário opere cegamen
 
 Principais oportunidades de melhoria:
 
-Cruzando as estatísticas fornecidas pela pesquisa supracitada com os requisitos e demandas do sistema em questão determinamos que as principais orpotunidades de melhoria do sistema se referem aos aspectos da plataforma que permitem ao usuário compreender o que ele está fazendo, bem como a finalidade de cada uma das funções a sua disposição, evitando assim que o mesmo se sinta perdido diante das diferentes telas e opções disponibilizadas.
+Cruzando as estatísticas fornecidas pela pesquisa supracitada com os requisitos e demandas do sistema em questão determinou-se que as principais orpotunidades de melhoria do sistema se referem aos aspectos da plataforma que permitem ao usuário compreender o que ele está fazendo, bem como a finalidade de cada uma das funções a sua disposição, evitando assim que o mesmo se sinta perdido diante das diferentes telas e opções disponibilizadas.
 
-A primeira oportunidade para melhoria envolve adotar uma das sugestões realizadas por um dos participantes da pesquisa: a utilização de _tooltips_ nos botões e links do sistema, detalhando a finalidade de cada um deles antes que sejam clicados, bastando que se mantenha o cursor do mouse sobre os mesmos. Com base nessa idéia também cogitamos um botão com ícone de ponto de interrogação <?> no canto superior direito de algumas telas. Ao serem clicados tais botões podem abrir um pop-up ou tooltip contendo detalhes mais extensos da função ou finalidade de uma dada seção da plataforma.
+<!-- A primeira oportunidade para melhoria envolve adotar uma das sugestões realizadas por um dos participantes da pesquisa: a utilização de _tooltips_ nos botões e links do sistema, detalhando a finalidade de cada um deles antes que sejam clicados, bastando que se mantenha o cursor do mouse sobre os mesmos. Com base nessa idéia também cogitou-se um botão com ícone de ponto de interrogação <?> no canto superior direito de algumas telas. Ao serem clicados tais botões podem abrir um pop-up ou tooltip contendo detalhes mais extensos da função ou finalidade de uma dada seção da plataforma. -->
 
 Por fim, pode-se ponderar a adição de uma tela que apresente um _mapa do sistema_ e/ou mesmo um manual do sistema, instruindo o usuário com dificuldades para que o mesmo não se sinta perdido entre as diferentes telas e funções do sistema. Porém cabe ressaltar aqui que o escopo da plataforma é ser utilizada na empresa que demandou o desenvolvimento do mesmo, visando automatizar algumas tarefas necessárias no trabalho cotidiano de um setor específico da organização. Com efeito é de se esperar que a implementação do sistema na empresa venha acompanhado de um treinamento da equipe, inicialmente instruídos por algum membro da equipe de desenvolvedores. Futuramente a mesma capacitação pode ser realizada pelos funcionários veteranos aos funcionários mais novos.
 
