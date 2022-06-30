@@ -41,9 +41,9 @@ ODIVAL QUARESMA NETO • Client-side </br>
 	
 | Release/Versão | Local | Data |
 | ------------ | ----------------- | ------------------------- |
-| Release vs_0.0.1 | São Luís - MA | 16 de Maio de 2022 |
-| Release vs_0.1.0 | São Luís - MA | 23 de Junho de 2022 |
-| Versão vs_1.0.0 | São Luís - MA | 27 de Junho de 2022 |	
+| Release vs_0.1.0 | São Luís - MA | 16 de Maio de 2022 |
+| Release vs_0.2.0 | São Luís - MA | 28 de Junho de 2022 |
+| Versão v1.0.0 | São Luís - MA | 07 de Julho de 2022 |	
 
 </br></br>
 
@@ -58,48 +58,39 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
   SUMÁRIO </br></br>
  </h3>
  
-<a href=" "> **INTRODUÇÃO** </a>
+<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#--introdu%C3%A7%C3%A3o--"> **INTRODUÇÃO** </a>
+- Demanda do Cliente EMSERF
+- Identificação dos requisitos
+- Prioridades dos requisitos
 
-		Demanda do Cliente EMSERF
-		Identificação dos requisitos
-		Prioridades dos requisitos
+<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#cap%C3%ADtulo-i---descri%C3%A7%C3%A3o-geral-do-sistema--"> **CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA** </a>
+- Abrangência e sistemas relacionados
+- Descrição dos usuários
+- Nome do tipo específico de usuário
+- Nome do tipo específico de usuário
 
-<a href=" "> **CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA** </a>
+<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#cap%C3%ADtulo-ii---requisitos-funcionais-casos-de-uso-"> **CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)** </a>
+- Nome de subseção para agrupar casos de uso correlacionados
+- Nome do caso de uso
+- Fluxo de eventos principal
+- Fluxos secundários (alternativos e de exceção)
+- [RF…] Nome do outro caso de uso
+- Nome da outra subseção para agrupar outros casos de uso correlacionados
 
-		Abrangência e sistemas relacionados
-		Descrição dos usuários
-		Nome do tipo específico de usuário
-		Nome do tipo específico de usuário
-
-<a href=" "> **CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)** </a>
-	
-		Nome de subseção para agrupar casos de uso correlacionados
-		Nome do caso de uso
-		Fluxo de eventos principal
-		Fluxos secundários (alternativos e de exceção)
-		[RF…] Nome do outro caso de uso
-		Nome da outra subseção para agrupar outros casos de uso correlacionados
-
-<a href=" "> **CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS** </a>
-
-	
-		Usabilidade
-		[NF001] Nome do requisito
-		Confiabilidade
-		[NF001] Nome do requisito
-		Desempenho
-		[NF001] Nome do requisito
-		Segurança
-		Distribuição
-		Padrões
-		Hardware e Software
+<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#cap%C3%ADtulo-iii---requisitos-n%C3%A3o-funcionais--"> **CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS** </a>
+- Usabilidade
+- Confiabilidade
+- Desempenho
+- Segurança
+- Distribuição
+- Padrões
+- Hardware e Software
 		
-<a href=" "> **CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO** </a>
-
-	Identificador de uma interface
-	Críticas da Interface
-	Indetificador de outra interface
-	Críticas da Interface
+<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#cap%C3%ADtulo-iv---descri%C3%A7%C3%A3o-da-interface-com-o-usu%C3%A1rio--"> **CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO** </a>
+- Identificador de uma interface
+- Críticas da Interface
+- Indetificador de outra interface
+- Críticas da Interface
 ---
 
 <h3 align="center">
@@ -119,15 +110,34 @@ Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas d
 <img src="https://user-images.githubusercontent.com/40738499/175784007-abc51aea-0a5f-4a59-ba36-1ca939e0efbc.png" width="800px" />
 	<p>Diagrama da Solução</p>
 </div>
-
 </br>
 
+---
+
 <h3 align="center">
-  DESCRIÇÃO DA INTERFACE COM O USUÁRIO </br>
+CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA </br>
+ </h3>
+ 
+ ---
+ 
+ <h3 align="center">
+CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)</br>
+ </h3>
+ 
+ ---
+ 
+ <h3 align="center">
+CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
+ </h3>
+ 
+ ---
+ 
+ <h3 align="center">
+CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO </br>
  </h3>
 
 
-**b)	Autenticação do Usuário**
+**Autenticação do Usuário**
 O fluxo de Autenticação do SISGAM, à princípio era no formato de assinatura digital com JWT (Json Web Token), todavia conforme realizamos o processo de refinar os requisitos, identificamos que na nossa infraestrutura EMSERF, não precisaríamos deste recurso, uma vez que ao fazer Logon na máquina (S.O), com usuário de rede EMSERF, uma GPO* já roda na sesssão do usuário, dando-lhe privilégios ou não e autenticando sistemas web e desktop. Além do controle de logs para efeito de Auditorias internas.
 
 Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via LocalStorage, onde o utilizando o recurso do próprio navegador é possível realizar a autenticação e mantê-lo na sessão até que efetue logout. Abaixo o componente "Auth.jsx", cuja variável "authenticated" é o termômetro da sessão, dessa forma, componentes que precisam do status da sessão passam a acessá-la em tempo de execução para serem renderizados ou não. Vide abaixo trecho do código de construção do componente "Auth.jsx", responsável pela Autenticação e Gerenciamento de sessão do SISGAM.
@@ -169,3 +179,4 @@ Sendo assim, **não existe necessidade do sistema ter a funcionalidade "esqueceu
 <p> Exportando Tabela </p>
 </h5>
 
+---
