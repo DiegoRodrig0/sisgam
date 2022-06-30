@@ -78,17 +78,17 @@ Menor unidade de trabalho na estrutura do Desenvolvimento Ágil, é uma explica�
 Segue abaixo algumas histórias de usuários relacionadas ao desenvolvimento da aplicação para o cliente EMSERF:
 | Categoria      | Descrição                                                                                                                                                                                         |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  			 NOTIFICAÇÃO 		 |  			 Como usuário eu quero poder informar facilmente quando houver necessidade de manutenção. 		                                                                                                       |
-|  			 NOTIFICAÇÃO 		 |  			 Como usuário eu quero alertar rapidamente uma necessidade de manutenção. 		                                                                                                                       |
-|  			 INTERFACE 		   |  			 Como usuário eu quero poder detalhar o item, local e tipo de manutenção necessária. 		                                                                                                            |
-|  			 API 		         |  			 Como administrador quero poder revisar e editar qualquer uma das entradas de alerta gerados pelos usuários. 		                                                                                    |
-|  			 INTERFACE 		   |  			 Como usuário quero poder visualizar os alertas e os técnicos escalados para cada demanda. 		                                                                                                      |
-|  			 NOTIFICAÇÃO 		 |  			 Como técnico eu quero receber notificação de alertas automaticamente via email. 		                                                                                                                |
-|  			 INTERFACE 		   |  			 Como técnico quero poder acessar a plataforma e visualizar o alerta e seus detalhes. 		                                                                                                           |
-|  			 INTERFACE 		   |  			 Como usuário gostaria de ter uma tela que oferece visão geral dos alertas e unidades onde os alertas estão alocados. 		                                                                           |
-|  			 ACESSO 		      |  			 Como usuário gostaria de poder ter um login próprio para que eu possa ter a garantia de que as movimentações feitas por mim ficaram registradas com segurança. 		                                                                    |
-|  			 RELATORIA 		   |  			 Como administrador gostaria que a aplicação gere relatórios com base em critérios específicos como tipos de alerta e unidades alocadas. 		                                                        | 		 |
-|  			 RELATORIA 		   |  			 Como administrador gostaria de ter um recurso que permita exportar os relatórios como planilhas de Excel ou documentos .xml.                                             
+|  			 NOTIFICAÇÃO 		 |  			 Como ponto focal eu quero poder informar facilmente quando houver necessidade de manutenção. 		                                                                                                       |
+|  			 NOTIFICAÇÃO 		 |  			 Como ponto focal eu quero alertar rapidamente uma necessidade de manutenção. 		                                                                                                                       |
+|  			 INTERFACE 		   |  			 Como ponto focal eu quero poder detalhar o item, local e tipo de manutenção necessária. 		                                                                                                            |
+|  			 API 		         |  			 Como gestor quero poder revisar e editar qualquer uma das entradas de alerta gerados pelos usuários. 		                                                                                    |
+|  			 INTERFACE 		   |  			 Como gestor quero poder visualizar os alertas e os técnicos escalados para cada demanda. 		                                                                                                      |
+|  			 NOTIFICAÇÃO 		 |  			 Como gestor eu quero receber notificação de alertas automaticamente via email. 		                                                                                                                |
+|  			 INTERFACE 		   |  			 Como gestor quero poder acessar a plataforma e visualizar o alerta e seus detalhes. 		                                                                                                           |
+|  			 INTERFACE 		   |  			 Como gestor ou ponto focal gostaria de ter uma tela que oferece visão geral dos alertas e unidades onde os alertas estão alocados. 		                                                                           |
+|  			 ACESSO 		      |  			 Como ponto focal gostaria de poder ter um login próprio para que eu possa ter a garantia de que as movimentações feitas por mim ficaram registradas com segurança. 		                                                                    |
+|  			 RELATORIA 		   |  			 Como gestor gostaria que a aplicação gere relatórios com base em critérios específicos como tipos de alerta e unidades alocadas. 		                                                        | 		 |
+|  			 RELATORIA 		   |  			 Como ponto focal gostaria de ter um recurso que permita exportar os relatórios como planilhas de Excel ou documentos .pdf ou .csv.                                             
 
 ---
 ## Seção 2.
