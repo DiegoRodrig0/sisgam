@@ -139,30 +139,69 @@ O sistema é desenvolvido para rodar apenas via browser, pois as pessoas que ir�
 **Vamos destacar atividades de nossos usuários, com base em funcionalidades chave do sistema, assim fica mais fácil mapear cada atividade impactada:**
 
 **a) Login/Autenticação:** </br>
-O acesso a qualquer aplicação web ou desktop dentro da rede corporativa EMSERF é autenticado no logon no sistema operacional, portanto o usuário usa a mesma senha em todos os sistemas.
+Seu proposito é liberar o acesso ao sistema;
 
-Essa atividade tende a ser realizada semanalmente, ou algumas vezes por semana, pois a definiçao dos técnicos e sedes para receber é feita sempre uma reunião que ocorre uma vez por semana com duração entre 20 e 40 minutos, por isso o uso do sistema não impacta nas outras atividades do ponto focal ou gestor.
+É uma atividade bem específica, que ocorre em apenas uma etapa;
 
-Uma outra possibilidade de utilização são nas movimentações de emergência, que esporadicamente ocorrem, portanto de fato o ciclo de login na aplicação tende a ser semanal.
+Ocorre com frequência, mas apenas no começo das sessões de uso do sistema;
+
+Esta atividade não requer colaboração de outros usuários;
+
+Os dados inseridos são senhas alfanuméricas simples, um para cada usuário;
+
+É um aspecto importante de segurança, mas não crítica para o funcionamento seguro do sistema.
 
 **b) Dashboard:** </br>
-Uma vez autenticado, usuário acessa a rota default da aplicação, que é um *dashbord* simples contendo um grid de cards, com todas as sedes de manutenção da EMSERF e seus respectivos técnicos distribuídos em campo.
+Esta atividade permite acesso a um grid de cards, com todas as sedes de manutenção da EMSERF e seus respectivos técnicos distribuídos em campo;
 
-A construção da interface se baseou no padrão Google Classroom, pois é um modelo de interface altamente intuitiva e muito simples, desta forma a experiência do nosso usuário tende a ser excelente, onde poderá cliclar é um cartão e ir até a sede que deseja para vincular ou desvincular profissionais para receber alertas.
+É uma atividade um pouco vaga, dada que se apresenta de modo open-ended, no qual o usuário pode realizar diversas funções diferentes sem uma ordem específica ou previsível;
+
+Sua realização é relativamente complexa pois se dá em uma quantidade razoável de passos que constituem a navegação entre os Detalhes de Sede e outras funções como Deslogar ou Exportar Tabela Excel;
+
+Ocorre com frequência uma vez que expressa uma das principais formas de uso da plataforma e, com efeito, compreende boa parte da sessão de uso;
+
+Embora possa ser realizada na companhia ou supervisão dos outros esta atividade não requer colaboração por parte de outras pessoas, podendo ser realizada de forma inteiramente individual;
+
+A rigor nenhum dado é inserido, apenas mostrado - a saber, dados em forma de texto que detalham as diferentes sedes da organização e seus técnicos alocados;
+
+Embora esponha informações que são pertinentes apenas à organização e seus funcionários, não é uma atividade crítica da segurança do sistema.
 
 **c) Detalhes da Sede:** </br>
-Cada cartão possui um botão chamado "Detalhes da Sede", cujo clique redireciona para uma matriz de dados, contendo os técnicos daquela sede selecionada e as opções de vincular e desvincular profissionais.
+Sua finalidade é redirecionar a navegação para uma matriz de dados, contendo os técnicos daquela sede selecionada e as opções de vincular e desvincular profissionais a ela alocados;
+
+É uma atividade muito específica, e possui ao menos duas etapas entre selecionar uma sede da organização e selecionar seus técnicos, tornando-a pouco complexa;
+
+Ocorre com frequência, por vezes diversas vezes ao longo de uma mesma sessão de acesso;
+
+Como as demais, não se trata de uma atividade colaborativa embora não reste prejudicada pela presença de outros na sua execução;
+
+Os dados inseridos são as seleções dos técnicos em uma dada matriz de dados;
+
+As informações utilizadas nesta atividade são importantes para a segurança, mas não críticas;
 
 **d) Menu Retrátil:** </br>
-Fica disponível durante a navegação um Menu Lateral Retrátil, onde o usuário pode navegar facilmente entre páginas. Neste menu o usuário poderá:
-- Retornar ao *dashbord*;
-- Exportar a síntese das movimentações;
-- Realizar Logout;
+Tem o objetivo de disponibilizar  durante a navegação um Menu Lateral Retrátil, onde o usuário pode navegar facilmente entre páginas;
 
-Esses recursos foram pensados não apenas por estética, mas sobretudo para otimizar o tempo do usuário, fazendo com que seja intuitivo o caminho que vai clicar pra atingir determinado objetivo.
+É uma atividade específica, de uso intuitivo e simples, realizada em apenas um passo que é o de selecionar um dentre três menus para navegar entre eles;
+
+É realizada frequentemente durante as sessões de acesso;
+
+Como nos itens supracitados é uma atividade individual, que não requer colaboração de outros usuários;
+
+Nenhum dado específico é inserido, apenas a leitura da seleção de cada menu é realizada;
+
+Não é crítica quanto à segurança do sistema;
 
 **e) Logout:** </br>
-O usuário finaliza a sessão, podendo logar assim que desejar.
+Propicia a finalização da sessão de uso;
+
+É uma atividade específica, simples e realizável em etapa única;
+
+Ocorre com pouca frequência e tem pico no final das sessões de acesso à plataforma;
+
+É uma atividade individual e não requer cooperação;
+
+Nenhum dado é inserido nesta etapa e sua realização não é crítica à segurança do sistema, embora seja importante para saneamento e controle de uso da plataforma.
 
 ### **CONTEXTO:**
 
