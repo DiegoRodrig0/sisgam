@@ -125,7 +125,7 @@ Vide abaixo as duas personas que melhor representam a essência de quem é nosso
 ### Aplicação do PACT Framework:
 
 <h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/169849587-0486cf4a-2b98-4f85-a9ba-6639c6ccf1ab.png" width="800px" />
+<img src="https://user-images.githubusercontent.com/11811499/176793525-3f24d079-66e7-440e-a99a-b101ac2a2e48.PNG" width="800px" />
 </h5>
 
 ### **PESSOAS:**
