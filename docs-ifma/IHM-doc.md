@@ -69,7 +69,12 @@ Esta aplicação é destinada aos gestores e pontos focais da equipe técnica de
 
 Histórias de usuários são um dos principais componentes em Desenvolvimento Ágil de Software, uma vez que colocam as pessoas como peça-chave na hora de se pensar no design e funcionalidade de uma aplicação.
 Essas histórias usam linguagem não-técnica para dar contexto à equipe de desenvolvimento e suas iniciativas.
-Menor unidade de trabalho na estrutura do Desenvolvimento Ágil, é uma explicação informal e geral sobre um recurso de software, articulado na forma de uma única tarefa que pode oferecer valor ao cliente ou _stakeholder_ da aplicação em tela.
+Menor unidade de trabalho na estrutura do Desenvolvimento Ágil, é uma explicação informal e geral sobre um recurso de software, articulado na forma de uma única tarefa que pode oferecer valor ao cliente ou _stakeholder_ da aplicação em tela
+### Usuários da aplicação:
+**Ponto Focal**: Usuário responsável por realizar a destinação dos alertas de manutenção no Sisgam conforme diretrizes da supervisão/gerência e assim aplicar priorização de manutenções. <br/><br/>
+**Gestor**: Determina as prioridades dos alertas pra os pontos focais de sua respectiva cobertura operacional. A princípio é um usuário que apenas visualiza informações, porém ele possui exatamente as mesmas funcionalidades do Ponto Focal, para quando conveniente ou necessário realizar movimentações no sistema.<br/><br/>
+**Administrador**: Usuário desenvolvedor, sendo responsável pelo suporte da aplicação.
+
 Segue abaixo algumas histórias de usuários relacionadas ao desenvolvimento da aplicação para o cliente EMSERF:
 | Categoria      | Descrição                                                                                                                                                                                         |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
