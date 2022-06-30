@@ -55,10 +55,12 @@ Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas d
 
 Esta aplicação é destinada aos gestores e pontos focais da equipe técnica de Manutenção Ferroviária do cliente EMSERF, podendo estes usuários através de uma interface Web e em tempo real, definir quais profissionais devem receber alertas de manutenção em sua região de atuação.
 
----
-#### Release vs_0.0.1 - São Luís - MA, 16 de Maio de 2022
-#### Release vs_0.1.0 - São Luís - MA, 23 de Junho de 2022
-#### Versão vs_1.0.0 - São Luís - MA, 27 de Junho de 2022
+| Release/Versão | Local | Data |
+| ------------ | ----------------- | ------------------------- |
+| Release vs_0.1.0 | São Luís - MA | 16 de Maio de 2022 |
+| Release vs_0.2.0 | São Luís - MA | 28 de Junho de 2022 |
+| Versão v1.0.0 | São Luís - MA | 07 de Julho de 2022 |
+
 ---
 </br>
 
