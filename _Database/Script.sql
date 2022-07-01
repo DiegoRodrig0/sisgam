@@ -28,24 +28,24 @@ CREATE TABLE IF NOT EXISTS `tb_map_sisgam` (
   KEY `fk_receiversede_receiver_idx` (`receiver_id`),
   CONSTRAINT `fk_receiversede_receiver` FOREIGN KEY (`receiver_id`) REFERENCES `tb_user_sisgam` (`id`),
   CONSTRAINT `fk_receiversede_sede` FOREIGN KEY (`sede_id`) REFERENCES `tb_unity_sisgam` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=384 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=392 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_sisgam_emserf.tb_map_sisgam: ~9 rows (approximately)
+-- Dumping data for table db_sisgam_emserf.tb_map_sisgam: ~29 rows (approximately)
 DELETE FROM `tb_map_sisgam`;
 /*!40000 ALTER TABLE `tb_map_sisgam` DISABLE KEYS */;
 INSERT INTO `tb_map_sisgam` (`id`, `receiver_id`, `sede_id`) VALUES
 	(1, 1, 1),
-	(2, 2, 2),
 	(373, 2, 5),
 	(3, 3, 3),
 	(4, 4, 4),
 	(5, 5, 9),
 	(383, 6, 2),
 	(366, 6, 9),
+	(389, 7, 2),
 	(21, 7, 4),
 	(368, 7, 5),
 	(7, 7, 9),
-	(382, 8, 2),
+	(391, 8, 2),
 	(8, 8, 8),
 	(9, 9, 1),
 	(12, 12, 6),
@@ -79,7 +79,7 @@ INSERT INTO `tb_unity_sisgam` (`id`, `nome`, `site`, `ref`) VALUES
 	(1, 'Tamancão', 'R. do Apicum, 6-198', 'Próx. Sítio Tamancão'),
 	(2, 'Gancharia', '2a Travessa da Rua Nova', 'Próx. Lanchonete Arena Gancharia'),
 	(3, 'Fumacê', 'Av. Vaticano', 'Próx. Igreja Adventista do Sétimo Dia'),
-	(4, 'Madre deus', 'Av. Sen. Vitorino Freire, S/N', 'Próx. Tribunal Regional Eleitoral MA'),
+	(4, 'Anel Viário', 'R. das Cajazeiras, 859', 'Próx. ao Mateus Supermercado'),
 	(5, 'Monte Castelo', 'Av. Getúlio Vargas, 04', 'Próx. ao SENAI Monte Castelo'),
 	(6, 'Apeadouro', 'Av. Getúlio Vargas, 88', 'Próx. Igreja São Vicente de Paulo'),
 	(7, 'João Paulo', 'Av. São Marçal, s/n ', 'Prox. ao 24ª BIS Exército Brasileiro'),
@@ -93,20 +93,22 @@ CREATE TABLE IF NOT EXISTS `tb_user_sisgam` (
   `email` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=230 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=232 DEFAULT CHARSET=utf8mb3;
 
--- Dumping data for table db_sisgam_emserf.tb_user_sisgam: ~0 rows (approximately)
+-- Dumping data for table db_sisgam_emserf.tb_user_sisgam: ~20 rows (approximately)
 DELETE FROM `tb_user_sisgam`;
 /*!40000 ALTER TABLE `tb_user_sisgam` DISABLE KEYS */;
 INSERT INTO `tb_user_sisgam` (`id`, `email`) VALUES
 	(18, 'alberico@emserf.com'),
 	(17, 'alexandre@emserf.com'),
 	(19, 'claudio@emserf.com'),
+	(231, 'daniel@emserf.com'),
 	(4, 'diego@emserf.com'),
 	(14, 'erik@emserf.com'),
 	(8, 'evaldinolia@emserf.com'),
 	(7, 'eveline@emserf.com'),
 	(13, 'flavio@emserf.com'),
+	(230, 'fulano@gmail.com'),
 	(1, 'jailson@emserf.com'),
 	(11, 'joaocarlos@emserf.com'),
 	(9, 'josenildo@emserf.com'),
