@@ -334,9 +334,10 @@ O sistema tem um ótimo modelo conceitual, evitando que o usuário opere cegamen
 
 ### Pesquisa UX:
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSeNK915CZaDpIhgumv9YWdxGEW-oY90FjKTZW1briknAPw7pA/viewform"> **Formulário da Pesquisa** </a> <br/>
-<a href="https://docs.google.com/forms/d/1uoUeZNKSXIeKx9c8seaA5VYIKzpwjhWXilgovIvwZgo/viewanalytics"> **Resultados da Pesquisa** </a> <br/>
-
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSeNK915CZaDpIhgumv9YWdxGEW-oY90FjKTZW1briknAPw7pA/viewform"> **Formulário da Pesquisa** </a> <br/><br/>
+<a href="https://docs.google.com/forms/d/1uoUeZNKSXIeKx9c8seaA5VYIKzpwjhWXilgovIvwZgo/viewanalytics"> **Resultados da Pesquisa** </a> <br/><br/>
+<a href="https://www.figma.com/file/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=0%3A1"> **Protótipo Melhorado** </a> <br/><br/>
+<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **Demo** </a> <br/><br/>
 Principais oportunidades de melhoria:
 
 Cruzando as estatísticas fornecidas pela pesquisa supracitada com os requisitos e demandas do sistema em questão determinou-se que as principais orpotunidades de melhoria do sistema se referem aos aspectos da plataforma que permitem ao usuário compreender o que ele está fazendo, bem como a finalidade de cada uma das funções a sua disposição, evitando assim que o mesmo se sinta perdido diante das diferentes telas e opções disponibilizadas.
@@ -348,7 +349,32 @@ Por fim, pode-se ponderar a adição de uma tela que apresente um _mapa do siste
 ---
 
 ## Seção 7.
-### Protótipo Final:
+### Aplicação Real:
 
-<a href="https://www.figma.com/file/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=0%3A1"> **Protótipo Melhorado** </a> <br/>
-<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> **Demo** </a> <br/>
+**Login**:
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888676-1b91e9f3-fe44-4ba7-b108-d759db5bba25.gif" width="700px" />
+</div><br/><br/>
+
+**Dashboard responsivo**:
+
+<img src="https://user-images.githubusercontent.com/40738499/176888728-e17009a5-8ab8-4798-9428-3d4f57f9e2ea.gif" width="700px" />
+</div><br/><br/>
+
+**Detalhes da Unidade**:
+
+<img src="https://user-images.githubusercontent.com/40738499/176888787-7b663239-8f88-4cbc-a66a-2afde277186b.gif" width="700px" />
+</div><br/><br/>
+
+**Exportação de Relatórios**:
+
+<img src="https://user-images.githubusercontent.com/40738499/176888841-e10a5aee-e51d-4fc8-a578-d4b73762fa4a.gif" width="700px" />
+</div><br/><br/>
+
+**Logout**:
+
+<img src="https://user-images.githubusercontent.com/40738499/176888907-d79d7aff-652d-4c32-878b-e37349ae5441.gif" width="700px" />
+</div>
+
+---
