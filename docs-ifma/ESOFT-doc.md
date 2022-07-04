@@ -58,18 +58,18 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
   SUMÁRIO </br></br>
  </h3>
  
-<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#--introdu%C3%A7%C3%A3o--"> **INTRODUÇÃO** </a>
+**INTRODUÇÃO**
 - Demanda do Cliente EMSERF
 - Identificação dos requisitos
 - Prioridades dos requisitos
 
-<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#cap%C3%ADtulo-i---descri%C3%A7%C3%A3o-geral-do-sistema--"> **CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA** </a>
+**CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA**
 - Abrangência e sistemas relacionados
 - Descrição dos usuários
 - Nome do tipo específico de usuário
 - Nome do tipo específico de usuário
 
-<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#cap%C3%ADtulo-ii---requisitos-funcionais-casos-de-uso-"> **CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)** </a>
+**CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)**
 - Nome de subseção para agrupar casos de uso correlacionados
 - Nome do caso de uso
 - Fluxo de eventos principal
@@ -77,7 +77,7 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
 - [RF…] Nome do outro caso de uso
 - Nome da outra subseção para agrupar outros casos de uso correlacionados
 
-<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#cap%C3%ADtulo-iii---requisitos-n%C3%A3o-funcionais--"> **CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS** </a>
+**CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS**
 - Usabilidade
 - Confiabilidade
 - Desempenho
@@ -86,7 +86,7 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
 - Padrões
 - Hardware e Software
 		
-<a href="https://github.com/yullano90/emserf_service_map_manager/edit/master/docs-ifma/ESOFT-doc.md#cap%C3%ADtulo-iv---descri%C3%A7%C3%A3o-da-interface-com-o-usu%C3%A1rio--"> **CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO** </a>
+**CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO**
 - Identificador de uma interface
 - Críticas da Interface
 - Indetificador de outra interface
@@ -151,32 +151,33 @@ Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via 
 
 --- 
 
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/175664072-d3a7244a-bbed-48ab-9901-2f58b3bd8d7b.PNG" width="1200px" /></br>
-<p> Tela de Login </p>
-</h5>
-
-**Importante considerarmos que os usuários da EMSERF, utilizam a mesma senha pra logar em qualquer sistema web ou desktop**. Uma vez autenticado na rede corporativa, ou seja, ao seja, **Logon no Sistema Operacional, um script é carregado no servidor tratando privilégios e diretrizes de segurança**.
+**Importante considerar que os usuários da EMSERF, utilizam a mesma senha pra logar em qualquer sistema web ou desktop**. Uma vez autenticado na rede corporativa, ou seja, ao seja, **Logon no Sistema Operacional, um script é carregado no servidor tratando privilégios e diretrizes de segurança**.
 Sendo assim, **não existe necessidade do sistema ter a funcionalidade "esqueceu sua senha?"**. Além disso como todo bom sistema, há o fluxo de captura de logs, gerado automaticamente para fins de auditoria e **Política Antifraude.**
 
+**Login**:
 
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/175666173-03d54c32-c66b-4b89-8ae3-e522cc38a3d7.gif" width="900px" /></br>
-<p> Acessando o Dashboard </p>
-</h5>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888676-1b91e9f3-fe44-4ba7-b108-d759db5bba25.gif" width="700px" />
+</div><br/><br/>
 
----
+**Dashboard responsivo**:
 
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/175667296-f0ebe8a6-6f5e-4bf0-a77e-6c1aa5161d01.gif" width="900px" /></br>
-<p> Gerenciando as Unidades </p>
-</h5>
+<img src="https://user-images.githubusercontent.com/40738499/176888728-e17009a5-8ab8-4798-9428-3d4f57f9e2ea.gif" width="700px" />
+</div><br/><br/>
 
----
+**Detalhes da Unidade**:
 
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/175784702-839016ce-fe39-414b-b04a-a01216400dd8.gif" width="900px" /></br>
-<p> Exportando Tabela </p>
-</h5>
+<img src="https://user-images.githubusercontent.com/40738499/176888787-7b663239-8f88-4cbc-a66a-2afde277186b.gif" width="700px" />
+</div><br/><br/>
+
+**Exportação de Relatórios**:
+
+<img src="https://user-images.githubusercontent.com/40738499/176888841-e10a5aee-e51d-4fc8-a578-d4b73762fa4a.gif" width="700px" />
+</div><br/><br/>
+
+**Logout**:
+
+<img src="https://user-images.githubusercontent.com/40738499/176888907-d79d7aff-652d-4c32-878b-e37349ae5441.gif" width="700px" />
+</div>
 
 ---
