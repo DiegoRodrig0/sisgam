@@ -38,12 +38,54 @@
 
 ---
 
-### • Equipe
+### • Programadores
 
-| Tecnologias |Programador| Disciplina(s)|
-| ----------------- | -------- | ----------------- |
-|<a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> Figma </a>|<a href="https://github.com/DiegoRodrig0"> [![diego_teixeira](https://img.shields.io/badge/Diego_Teixeira-Prototyping-blue.svg)](https://github.com/DiegoRodrig0) </a> | Interação Homem-Máquina |
-|<a href="https://github.com/yullano90/emserf_service_map_manager/tree/master/_Front-end"> React JS </a>|<a href="https://github.com/odivalq"> [![odival_quaresma](https://img.shields.io/badge/Odival_Quaresma-Frontend-blue.svg)](https://github.com/odivalq) </a>| Interação Homem-Máquina + Engenharia de Software|
-|<a href="https://github.com/yullano90/emserf_service_map_manager/tree/master/_Back-end"> Node JS </a>|<a href="https://github.com/yullano90"> [![iulano_santos](https://img.shields.io/badge/Iulano_Santos-Backend-blue.svg)](https://github.com/yullano90) </a>| Interação Homem-Máquina + Engenharia de Software |
-|<a href="https://github.com/yullano90/emserf_service_map_manager/tree/master/_Database"> MySQL </a>|<a href="https://github.com/scjailson"> [![jailson_soares](https://img.shields.io/badge/Jailson_Soares-Database-blue.svg)](https://github.com/scjailson) </a>| Engenharia de Software |
+<table>
 
+<tr>
+
+<td align="center"><a> Tecnologias <br/> </a></td>
+
+<td align="center"><a href="https://github.com/yullano90/emserf_service_map_manager/tree/master/_Back-end"> Node JS </a></td>
+
+<td align="center"><a href="https://github.com/yullano90/emserf_service_map_manager/tree/master/_Front-end"> React JS </a></td>
+
+<td align="center"><a href="https://www.figma.com/proto/8nohgZFsrHimifrt5FvQzy/Projeto-EMSERF?node-id=5%3A2&scaling=contain&page-id=0%3A1&starting-point-node-id=5%3A2"> Figma </a></td>
+
+<td align="center"><a href="https://github.com/yullano90/emserf_service_map_manager/tree/master/_Database"> MySQL </a>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td align="center"><a> Programador <br/> </a></td>
+
+<td align="center"><a href="https://github.com/yullano90/"><img src="https://avatars.githubusercontent.com/u/40738499?v=4" width="100px;" alt=""/><br /><sub><b>Yullano Santos</b></td>
+
+<td align="center"><a href="https://github.com/odivalq"><img src="https://avatars.githubusercontent.com/u/11811499?v=4" width="100px;" alt=""/><br /><sub><b>Odival Quaresma</b></td>
+
+<td align="center"><a href="https://github.com/DiegoRodrig0"><img src="https://avatars.githubusercontent.com/u/84028669?v=4" width="100px;" alt=""/><br /><sub><b>Diego Rodrigo </b></td>
+
+<td align="center"><a href="https://github.com/scjailson"><img src="https://avatars.githubusercontent.com/u/54485111?v=4" width="100px;" alt=""/><br /><sub><b>Jailson Soares</b></sub></a><br /></td>
+
+</tr>
+
+<tr>
+
+<td align="center"><a> Disciplinas <br/> </a></td>
+
+<td align="center"><a>Interação Homem-Máquina<br/>Engenharia de Software<br/></a></td>
+
+<td align="center"><a>Interação Homem-Máquina<br/>Engenharia de Software<br/></a></td>
+
+<td align="center"><a>Interação Homem-Máquina</a></td>
+
+<td align="center"><a>Engenharia de Software</a></td>
+
+</tr>
+
+</table>
+
+---
