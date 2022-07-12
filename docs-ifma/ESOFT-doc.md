@@ -148,7 +148,7 @@ O sistema deve permitir que administradores adicionem, editem ou deletem unidade
 
 O sistema deve permitir que usuários habilitados possam vincular ou desvincular gerenciando quem de fato deve receber alertas de manutenção
 
-**Ator**: Gestor
+**Ator**: Administrador, Gestor e Ponto Focal
 
 **Prioridade**: [] Essencial [x] Importante [] Desejável
 
@@ -166,7 +166,7 @@ O sistema deve permitir que usuários habilitados possam vincular ou desvincular
 
 O sistema deve gerar tabela excel em arquivo que pode ser impresso ou salvo em disco com extensão .xls, contendo todos os técnicos, separados por unidades da organização, que estão adicionados no sistema e aptos para receber notificações.
 
-**Ator**: Gestor
+**Ator**: Administrador, Gestor e Ponto Focal
 
 **Prioridade**: [] Essencial [x] Importante [] Desejável
 
