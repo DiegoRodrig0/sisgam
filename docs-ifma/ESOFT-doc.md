@@ -293,6 +293,13 @@ Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via 
 **Importante considerar que os usuários da EMSERF, utilizam a mesma senha pra logar em qualquer sistema web ou desktop**. Uma vez autenticado na rede corporativa, ou seja, ao seja, **Logon no Sistema Operacional, um script é carregado no servidor tratando privilégios e diretrizes de segurança**.
 Sendo assim, **não existe necessidade do sistema ter a funcionalidade "esqueceu sua senha?"**. Além disso como todo bom sistema, há o fluxo de captura de logs, gerado automaticamente para fins de auditoria e **Política Antifraude.**
 
+
+**Fluxo Geral do SISGAM**:
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/178520424-6bc12f2e-59b6-4318-b2bf-e36a5cd54ada.jpg" width="900px" />
+</div><br/><br/>
+
 **Login**:
 
 <div align="center">
