@@ -124,12 +124,106 @@ CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA </br>
 CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)</br>
  </h3>
  
+**Edição de Grade de Unidades**
+
+O sistema deve permitir que administradores adicionem, editem ou deletem unidades da empresa em uma grade na tela principal.
+
+**Ator**: Administrador
+
+**Prioridade**: [x] Essencial [] Importante [] Desejável
+
+**Entradas e pré condições:** Conexão com internet e privilégios de administração
+
+**Saídas e pós condições:** Modificação na configuração da grade de unidades
+
+**Fluxo de eventos principal**
+
+1. Administrador loga no sistema e vai para página principal;  
+2. Administrador clica no ícone de edição nos elementos que representam as unidades da empresa (dispostos em forma de grade);  
+3. Uma nova tela se abre oferecendo opções para editar detalhes numa unidade específica, há opção para deletar a unidade também.
+
+  
+
+**Gerenciamento de usuários que devem receber alertas**
+
+O sistema deve permitir que usuários habilitados possam vincular ou desvincular gerenciando quem de fato deve receber alertas de manutenção
+
+**Ator**: Administrador
+
+**Prioridade**: [] Essencial [x] Importante [] Desejável
+
+**Entradas e pré condições:** Estar logado no sistema, ter um alerta aberto
+
+**Saídas e pós condições:** Modificação em um alerta específico
+
+**Fluxo de eventos principal**
+
+1. O administrador seleciona uma unidade da empresa na tela principal; 2. Na listagem de técnicos da unidade escolhida ele pode então vincular ou desvincular técnicos na sede de manutenção selecionada e a partir de então o sistema core de alertas passa automaticamente a disparar alertas para o usuário vinculado a determinada sede, pois ele enxerga apenas o banco de dados, cumprindo assim o seu papel de "Aplicação Satélite".
+
+  
+
+**Geração de relatório das movimentações realizadas**
+
+O sistema deve gerar relatório com arquivo pode ser impresso ou salvo em disco com extensão .csv, com as movimentações realizadas.
+
+**Ator**: Usuário
+
+**Prioridade**: [] Essencial [x] Importante [] Desejável
+
+**Entradas e pré condições:** Acesso ao sistema
+
+**Saídas e pós condições:** Um arquivo com extensão .pdf ou .csv
+
+**Fluxo de eventos principal**
+
+1. O usuário clica no ícone de "Export Excel" no Menu Lateral Retrátil; 2. O sistema executa método de exportação do array resultante das movimentações aplicadas.
+
  ---
  
  <h3 align="center">
 CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
  </h3>
  
+**Usabilidade**: A aplicação presente, possui uma interação homem maquina, muito didática. Com acessos que facilitam a navegação do operador de forma intuitiva e simplificada. O usufrutuário tem o total acesso a documentação disponibilizada da aplicação no GitHub, com uma navegação através de GIF, para a tirada de dúvidas.
+
+**MANUAL DE USO**
+
+Manual de instruções para a utilização do programa.
+
+**Prioridade**: [] Essencial [] Importante [x] Desejável
+
+**Confiabilidade**: A aplicação trabalha com manutenções preventivas, programadas para evitar erros diversos que possam vim a ocorrer no sistema.
+
+**TESTE DE ERROS**
+
+Eventuais testes para prevenção de erros.
+
+**Prioridade**: [] Essencial [x] Importante [] Desejável
+
+**Desempenho**: Trata-se de uma aplicação rápida e leve em que não depende totalmente de outros softwares para a sua execução, exportação de arquivos em menos de 10 segundos e acesso feito de qualquer dispositivo móvel.
+
+**TESTE DE RAPIDEZ**
+
+Teste para ver a rapidez e eficiência da aplicação.
+
+**Prioridade**: [] Essencial [x] Importante [] Desejável
+
+**Segurança**: No modo de segurança para o operador utilizamos da autenticação via LocalStorage, onde o utilizando o recurso do próprio navegador é possível realizar a autenticação e mantê-lo na sessão até que efetue logout.
+
+**TESTE DO CAPTCHA**
+
+Validação se é ou não um robô.
+
+**Prioridade**: [x] Essencial [] Importante [] Desejável
+
+Hardware e software: Utilizou-se para o desenvolvimento da aplicação programas como, MySQL Workbench, HeidiSQL, Draw.io, Figma, Stack Javascript, React JS, Node JS, etc. Foram componentes fundamentais para a criação e fundamentação da aplicação.
+
+**PROGRAMAS GRATUITOS**
+
+Utilização de programas gratuitos para diminuição de custos.
+
+**Prioridade**: [x] Essencial [] Importante [] Desejável
+
  ---
  
  <h3 align="center">
