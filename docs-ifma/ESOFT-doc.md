@@ -3,6 +3,7 @@
 <img src="https://user-images.githubusercontent.com/40738499/168456236-ce8aac11-ddb7-4dbb-a540-00c39e10927b.png" width="250px" />
 </br></br></br></br>
 
+
 DEPARTAMENTO DE COMPUTAÇÃO</br>
 SISTEMAS DE INFORMAÇÃO</br>
 </br>
@@ -18,7 +19,7 @@ SISTEMAS DE INFORMAÇÃO</br>
 </br></br></br></br>
 
 <h5 align="center">
-VERSÃO 1.0.0 • JUNHO 2022
+VERSÃO 1.0.0 • JULHO 2022
  <br/><br/>
 SÃO LUÍS, MARANHÃO </br>
 </br></br></br></br>
@@ -43,13 +44,13 @@ ODIVAL QUARESMA NETO • Client-side </br>
 | ------------ | ----------------- | ------------------------- |
 | Release vs_0.1.0 | São Luís - MA | 16 de Maio de 2022 |
 | Release vs_0.2.0 | São Luís - MA | 28 de Junho de 2022 |
-| Versão v1.0.0 | São Luís - MA | 07 de Julho de 2022 |	
+| Versão v1.0.0 | São Luís - MA | 12 de Julho de 2022 |	
 
 </br></br>
 
 ## Público Alvo:
 
-Este manual destina-se aos gestores e pontos focais da equipe técnica de Manutenção Ferroviária do cliente EMSERF, dando-lhes o conhecimento necessário para operar em uma interface Web capaz de definir, em tempo real, quais profissionais devem receber alertas de manutenção em sua região de atuação.
+Este manual destina-se aos gestores e pontos focais da equipe técnica de Manutenção Ferroviária do cliente EMSERF *Empresa Maranhense de Serviços Ferroviários*, dando-lhes o conhecimento necessário para operar em uma interface Web capaz de definir, em tempo real, quais profissionais devem receber alertas de manutenção em sua região de atuação.
 </br></br></br></br>
 
 ---
@@ -59,38 +60,16 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
  </h3>
  
 **INTRODUÇÃO**
-- Demanda do Cliente EMSERF
-- Identificação dos requisitos
-- Prioridades dos requisitos
 
 **CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA**
-- Abrangência e sistemas relacionados
-- Descrição dos usuários
-- Nome do tipo específico de usuário
-- Nome do tipo específico de usuário
 
-**CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)**
-- Nome de subseção para agrupar casos de uso correlacionados
-- Nome do caso de uso
-- Fluxo de eventos principal
-- Fluxos secundários (alternativos e de exceção)
-- [RF…] Nome do outro caso de uso
-- Nome da outra subseção para agrupar outros casos de uso correlacionados
+**CAPÍTULO II - REQUISITOS FUNCIONAIS**
 
 **CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS**
-- Usabilidade
-- Confiabilidade
-- Desempenho
-- Segurança
-- Distribuição
-- Padrões
-- Hardware e Software
-		
+
 **CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO**
-- Identificador de uma interface
-- Críticas da Interface
-- Indetificador de outra interface
-- Críticas da Interface
+</br></br></br></br>
+
 ---
 
 <h3 align="center">
@@ -118,19 +97,40 @@ Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas d
 CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA </br>
  </h3>
  
+ **Abrangência e Sistemas Relacionados:**
+
+O SISGAM é uma Aplicação do tipo Satélite e compreende o fluxo completo de gerenciamento de usuários que recebem alertas de manutenção do endpoint (já existente) do SISCORE, portanto ele contempla uma operação de monitoramento preventivo e/ou corretivo da área de manutenção.
+Sua relevância na operação é muito alta, pois quanto mais agilidade há no processo de priorização de alertas, mais rapidamente problemas serão resolvidos ou previnidos.
+
+A aplicação possui 03 tipos de usuário:
+
+- **Ponto Focal**: Usuário administrativo que seguindo diretrizes da gestão operacional gerencia usuários recebedores de alertas de manutenção em sua região de atuação.
+
+- **Gestor**: Usuário responsável pela operação e pelo mapa de manutenção EMSERF. Possui acesso as mesmas funcionalidades do Ponto Focal, contudo as utiliza conforme conveniência ou até mesmo ausência do Ponto Focal.
+
+- **Administrador**: Usuário desenvolvedor da aplicação, atua em melhorias do software tendo pleno acesso ao código fonte da aplicação.
+ 
+<h5 align="center">
+<img src="https://user-images.githubusercontent.com/40738499/178416362-3b72850e-0ef4-454d-a1b0-0e015838084a.jpeg" width="800px" /></br>
+<p> Diagrama de Caso de Uso </p>
+</h5>
+
  ---
  
  <h3 align="center">
-CAPÍTULO II - REQUISITOS FUNCIONAIS (CASOS DE USO)</br>
+CAPÍTULO II - REQUISITOS FUNCIONAIS </br>
  </h3>
  
 **Edição de Grade de Unidades**
 
-O sistema deve permitir que administradores adicionem, editem ou deletem unidades da empresa em uma grade na tela principal.
+O sistema deve permitir que Ponto Focal e/ou Gestor adicionem, editem ou deletem unidades da empresa em uma grade na tela principal.
 
-**Ator**: Administrador
+**Ator**: Ponto Focal e/ou Gestor.
 
-**Prioridade**: [x] Essencial [] Importante [] Desejável
+**Prioridade**:
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
 
 **Entradas e pré condições:** Conexão com internet e privilégios de administração
 
@@ -138,19 +138,21 @@ O sistema deve permitir que administradores adicionem, editem ou deletem unidade
 
 **Fluxo de eventos principal**
 
-1. Administrador loga no sistema e vai para página principal;  
-2. Administrador clica no ícone de edição nos elementos que representam as unidades da empresa (dispostos em forma de grade);  
+1. Ponto Focal e/ou Gestor loga no sistema e vai para página principal;  
+2. Ponto Focal e/ou Gestor clica no ícone de edição nos elementos que representam as unidades da empresa (dispostos em forma de grade);  
 3. Uma nova tela se abre oferecendo opções para editar detalhes numa unidade específica, há opção para deletar a unidade também.
-
   
 
 **Gerenciamento de usuários que devem receber alertas**
 
-O sistema deve permitir que usuários habilitados possam vincular ou desvincular gerenciando quem de fato deve receber alertas de manutenção
+O sistema deve permitir que Ponto Focal e/ou Gestor habilitados possam vincular ou desvincular gerenciando quem de fato deve receber alertas de manutenção
 
-**Ator**: Administrador, Gestor e Ponto Focal
+**Ator**: Ponto Focal e/ou Gestor.
 
-**Prioridade**: [] Essencial [x] Importante [] Desejável
+**Prioridade**:
+- [ ] Essencial 
+- [x] Importante
+- [ ]  Desejável
 
 **Entradas e pré condições:** Estar logado no sistema, ter um alerta aberto
 
@@ -158,7 +160,7 @@ O sistema deve permitir que usuários habilitados possam vincular ou desvincular
 
 **Fluxo de eventos principal**
 
-1. O administrador seleciona uma unidade da empresa na tela principal; 2. Na listagem de técnicos da unidade escolhida ele pode então vincular ou desvincular técnicos na sede de manutenção selecionada e a partir de então o sistema core de alertas passa automaticamente a disparar alertas para o usuário vinculado a determinada sede, pois ele enxerga apenas o banco de dados, cumprindo assim o seu papel de "Aplicação Satélite".
+1. O Ponto Focal e/ou Gestor seleciona uma unidade da empresa na tela principal; 2. Na listagem de técnicos da unidade escolhida ele pode então vincular ou desvincular técnicos na sede de manutenção selecionada e a partir de então o sistema core de alertas passa automaticamente a disparar alertas para o usuário vinculado a determinada sede, pois ele enxerga apenas o banco de dados, cumprindo assim o seu papel de "Aplicação Satélite".
 
   
 
@@ -166,9 +168,12 @@ O sistema deve permitir que usuários habilitados possam vincular ou desvincular
 
 O sistema deve gerar tabela excel em arquivo que pode ser impresso ou salvo em disco com extensão .xls, contendo todos os técnicos, separados por unidades da organização, que estão adicionados no sistema e aptos para receber notificações.
 
-**Ator**: Administrador, Gestor e Ponto Focal
+**Ator**: Ponto Focal e/ou Gestor.
 
-**Prioridade**: [] Essencial [x] Importante [] Desejável
+**Prioridade**:
+- [ ] Essencial 
+- [x] Importante
+- [ ]  Desejável
 
 **Entradas e pré condições:** Acesso ao sistema
 
@@ -176,7 +181,7 @@ O sistema deve gerar tabela excel em arquivo que pode ser impresso ou salvo em d
 
 **Fluxo de eventos principal**
 
-1. O usuário clica no ícone de "Export Excel" no Menu Lateral Retrátil; 2. O sistema executa método de exportação do array resultante das movimentações aplicadas.
+1. O Ponto Focal e/ou Gestor clica no ícone de "Export Excel" no Menu Lateral Retrátil; 2. O sistema executa método de exportação do array resultante das movimentações aplicadas.
 
  ---
  
@@ -184,21 +189,27 @@ O sistema deve gerar tabela excel em arquivo que pode ser impresso ou salvo em d
 CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
  </h3>
  
-**Usabilidade**: A aplicação presente, possui uma interação homem maquina, muito didática. Com acessos que facilitam a navegação do operador de forma intuitiva e simplificada. O usuário tem o total acesso a documentação disponibilizada da aplicação no GitHub, com uma navegação através de GIF, para a tirada de dúvidas.
+**Usabilidade**: A aplicação presente, possui uma interação homem-máquina muito didática. Com acessos que facilitam a navegação do operador de forma intuitiva e simplificada. O usuário tem o total acesso a documentação da aplicação disponibilizada no GitHub, com demos da navegação através de .GIFs.
 
 **MANUAL DE USO**
 
-Manual de instruções para a utilização do programa.
+Manual de instruções para a utilização do programa no formato de documentação web, disponiblizada através de uma rota na própria aplicação.
 
-**Prioridade**: [] Essencial [] Importante [x] Desejável
+**Prioridade**:
+- [ ] Essencial 
+- [ ] Importante
+- [x]  Desejável
 
-**Confiabilidade**: A aplicação trabalha com manutenções preventivas, programadas para evitar erros diversos que possam vim a ocorrer no sistema.
+**Confiabilidade**: A aplicação trabalha com manutenções preventivas e corretivas, programadas para evitar perda de ativos da companhia e cuidar da vida útil dos equipamentos dos clientes da EMSERF.
 
 **TESTE DE ERROS**
 
 Eventuais testes para prevenção de erros.
 
-**Prioridade**: [] Essencial [x] Importante [] Desejável
+**Prioridade**:
+- [ ] Essencial 
+- [x] Importante
+- [ ]  Desejável
 
 **Desempenho**: Trata-se de uma aplicação rápida e leve em que não depende totalmente de outros softwares para a sua execução, exportação de arquivos em menos de 10 segundos e acesso feito de qualquer dispositivo móvel.
 
@@ -206,7 +217,10 @@ Eventuais testes para prevenção de erros.
 
 Teste para ver a rapidez e eficiência da aplicação.
 
-**Prioridade**: [] Essencial [x] Importante [] Desejável
+**Prioridade**:
+- [ ] Essencial 
+- [x] Importante
+- [ ]  Desejável
 
 **Segurança**: No modo de segurança para o operador utilizamos da autenticação via LocalStorage, onde o utilizando o recurso do próprio navegador é possível realizar a autenticação e mantê-lo na sessão até que efetue logout.
 
@@ -214,15 +228,23 @@ Teste para ver a rapidez e eficiência da aplicação.
 
 Validação se é ou não um robô.
 
-**Prioridade**: [x] Essencial [] Importante [] Desejável
+**Prioridade**:
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
 
-Hardware e software: Utilizou-se para o desenvolvimento da aplicação programas como, MySQL Workbench, HeidiSQL, Draw.io, Figma, Stack Javascript, React JS, Node JS, etc. Foram componentes fundamentais para a criação e fundamentação da aplicação.
+**HARDWARE E SOFTWARE:**
+
+Utilizou-se para o desenvolvimento da aplicação programas como, MySQL Workbench, HeidiSQL, Draw.io, Figma, Stack Javascript, React JS, Node JS, etc. Foram componentes fundamentais para a criação e fundamentação da aplicação.
 
 **PROGRAMAS GRATUITOS**
 
 Utilização de programas gratuitos para diminuição de custos.
 
-**Prioridade**: [x] Essencial [] Importante [] Desejável
+**Prioridade**:
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
 
  ---
  
@@ -251,27 +273,31 @@ Sendo assim, **não existe necessidade do sistema ter a funcionalidade "esqueceu
 **Login**:
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/40738499/176888676-1b91e9f3-fe44-4ba7-b108-d759db5bba25.gif" width="700px" />
+<img src="https://user-images.githubusercontent.com/40738499/176888676-1b91e9f3-fe44-4ba7-b108-d759db5bba25.gif" width="900px" />
 </div><br/><br/>
 
 **Dashboard responsivo**:
 
-<img src="https://user-images.githubusercontent.com/40738499/176888728-e17009a5-8ab8-4798-9428-3d4f57f9e2ea.gif" width="700px" />
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888728-e17009a5-8ab8-4798-9428-3d4f57f9e2ea.gif" width="900px" />
 </div><br/><br/>
 
 **Detalhes da Unidade**:
 
-<img src="https://user-images.githubusercontent.com/40738499/176888787-7b663239-8f88-4cbc-a66a-2afde277186b.gif" width="700px" />
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888787-7b663239-8f88-4cbc-a66a-2afde277186b.gif" width="900px" />
 </div><br/><br/>
 
 **Exportação de Relatórios**:
 
-<img src="https://user-images.githubusercontent.com/40738499/176888841-e10a5aee-e51d-4fc8-a578-d4b73762fa4a.gif" width="700px" />
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888841-e10a5aee-e51d-4fc8-a578-d4b73762fa4a.gif" width="900px" />
 </div><br/><br/>
 
 **Logout**:
 
-<img src="https://user-images.githubusercontent.com/40738499/176888907-d79d7aff-652d-4c32-878b-e37349ae5441.gif" width="700px" />
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888907-d79d7aff-652d-4c32-878b-e37349ae5441.gif" width="900px" />
 </div>
 
 ---
