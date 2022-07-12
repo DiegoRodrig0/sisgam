@@ -148,7 +148,7 @@ O sistema deve permitir que administradores adicionem, editem ou deletem unidade
 
 O sistema deve permitir que usuários habilitados possam vincular ou desvincular gerenciando quem de fato deve receber alertas de manutenção
 
-**Ator**: Administrador
+**Ator**: Gestor
 
 **Prioridade**: [] Essencial [x] Importante [] Desejável
 
@@ -162,17 +162,17 @@ O sistema deve permitir que usuários habilitados possam vincular ou desvincular
 
   
 
-**Geração de relatório das movimentações realizadas**
+**Geração de Tabela HTML dos Técnicos Alocados no Sistema**
 
-O sistema deve gerar relatório com arquivo pode ser impresso ou salvo em disco com extensão .csv, com as movimentações realizadas.
+O sistema deve gerar tabela excel em arquivo que pode ser impresso ou salvo em disco com extensão .xls, contendo todos os técnicos, separados por unidades da organização, que estão adicionados no sistema e aptos para receber notificações.
 
-**Ator**: Usuário
+**Ator**: Gestor
 
 **Prioridade**: [] Essencial [x] Importante [] Desejável
 
 **Entradas e pré condições:** Acesso ao sistema
 
-**Saídas e pós condições:** Um arquivo com extensão .pdf ou .csv
+**Saídas e pós condições:** Um arquivo com extensão .xls
 
 **Fluxo de eventos principal**
 
@@ -184,7 +184,7 @@ O sistema deve gerar relatório com arquivo pode ser impresso ou salvo em disco 
 CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
  </h3>
  
-**Usabilidade**: A aplicação presente, possui uma interação homem maquina, muito didática. Com acessos que facilitam a navegação do operador de forma intuitiva e simplificada. O usufrutuário tem o total acesso a documentação disponibilizada da aplicação no GitHub, com uma navegação através de GIF, para a tirada de dúvidas.
+**Usabilidade**: A aplicação presente, possui uma interação homem maquina, muito didática. Com acessos que facilitam a navegação do operador de forma intuitiva e simplificada. O usuário tem o total acesso a documentação disponibilizada da aplicação no GitHub, com uma navegação através de GIF, para a tirada de dúvidas.
 
 **MANUAL DE USO**
 
