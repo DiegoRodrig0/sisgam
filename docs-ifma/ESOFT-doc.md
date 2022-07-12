@@ -189,61 +189,83 @@ O sistema deve gerar tabela excel em arquivo que pode ser impresso ou salvo em d
 CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
  </h3>
  
-**Usabilidade**: A aplicação presente, possui uma interação homem-máquina muito didática. Com acessos que facilitam a navegação do operador de forma intuitiva e simplificada. O usuário tem o total acesso a documentação da aplicação disponibilizada no GitHub, com demos da navegação através de .GIFs.
+**USABILIDADE:**
 
-**MANUAL DE USO**
+- **RNF01 - Facilidade de Aprendizado:** A aplicação possui uma interface muito simples e objetiva, com apenas 04 telas distintas(Login, Dashboard, Detalhes e Report). Dessa forma, qualquer colaborador designado para operar nela, conseguirá facilmente utilizá-la e antingir os objetivos de seu uso semanal.
 
-Manual de instruções para a utilização do programa no formato de documentação web, disponiblizada através de uma rota na própria aplicação.
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
 
-**Prioridade**:
+- **RNF02 - Facilidade de Uso:** Por ser uma melhoria automatizada de um processo outrora manual, os usuários já tem a bagagem do processo, sentem a melhoria e por isso operam com muita facilidade na aplicação.
+ 
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
+
+**CONFIABILIDADE:**
+
+- **RNF03 - Disponibilidade:** A aplicação fica hospedada no servidor de produção da EMSERF, ficando no ar 24X7. Logo, sempre que um usuário logar a aplicação estará disponível pra uso.
+
+- [ ] Essencial 
+- [x] Importante
+- [ ]  Desejável
+
+- **RNF04 - Probabilidade de falha durante fase operacional:** Mesmo não se tratando de uma aplicação contínua em jornada diária, uma vez que eu uso é semanal, ainda assim possui alta criticidade no que é capaz de definir e por conseguinte, houve uma preocupação muito grande em contornar comportamentos inesperados do sistema como queda de servidores, banco de dados sem resposta temporária etc. Tanto na API para o programador existem contornos para que na maioria dos casos, o frontend fique estático, quando uma operação CRUD não seja completada, por exemplo.
+
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
+
+**DESEMPENHO:**
+
+- **RNF05 - Requisitos de resposta:** Qualquer ação no SISGAM deve ter resposta num intervalo default de 2 segundos, e requisições HTTP possuem timeout de 5 segundos, sendo superado este tempo a operação é reiniciada e sinalizada um componente de modal do React, sinalizando que há um delay acima do esperado na requisição.
+
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
+
+- **RNF06 - Requisitos de processamento (throughput):** O sistema deve processar no mínimo 05 transações por segundo seguindo um padrão já estabelecido em todas as aplicações EMSERF.
+
 - [ ] Essencial 
 - [ ] Importante
 - [x]  Desejável
 
-**Confiabilidade**: A aplicação trabalha com manutenções preventivas e corretivas, programadas para evitar perda de ativos da companhia e cuidar da vida útil dos equipamentos dos clientes da EMSERF.
+- **RNF07 - Requisitos de espaço:** O SISGAM utiliza uma stage (cópia) do banco de dados do SISCORE (sistema já existente que envia alertas de manutenção) e através de dataflows tem seus dados atualizados apenas uma vez por dia em D-1 às 0h, uma vez que sua utilização é semanal e em casos excepcionais mais de uma vez por semana, por conseguinte o espaço em disco corresponde apenas aos meta arquivos de pacotes, conectores e binarios do sistema. Em função disso, necessita de uma quantidade de espaço em disco para processar o baixo volume de dados. Para atender a essa necessidade, 1.5 GB de espaço em disco para armazenamento é suficiente na versão atual.
 
-**TESTE DE ERROS**
-
-Eventuais testes para prevenção de erros.
-
-**Prioridade**:
 - [ ] Essencial 
 - [x] Importante
 - [ ]  Desejável
 
-**Desempenho**: Trata-se de uma aplicação rápida e leve em que não depende totalmente de outros softwares para a sua execução, exportação de arquivos em menos de 10 segundos e acesso feito de qualquer dispositivo móvel.
+**SEGURANÇA:**
 
-**TESTE DE RAPIDEZ**
+- **RNF08 - Integridade:** Considerando o RNF07, os dados sempre estarão íntegros pois não usamos (diretamente) o Banco de Dados do SISCORE, zerando qualquer possbilidade de corrompê-lo. No tocante à perspectiva de Intergidade Referencial, o banco é modelado para garantir a unicidade de suas chaves e dessa forma também se mantém íntegro.
 
-Teste para ver a rapidez e eficiência da aplicação.
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
 
-**Prioridade**:
+- **RNF09 - Autenticação:** o SISGAM é uma aplicação que só pode ser acessada na rede corporativa EMSERF, e sendo assim, usuário precisa fazer Logon na mesma. Após, uma GPO é carregada dando-lhe privilégios e autenticando sistemas web e desktop através das diretivas da seção. Com todo esse fluxo se segurança e controle de logs, o SISGAM tem sua autenticação a nível de servidor e para manter o usuário logado de forma simples, utilizou-se a estratégia LocalStorage onde armazena-se temporariamente os dados da seção no browser até que o usuário efetue Logout. O usuário jamais conseguirá logar na aplicação com uma credencial que não é sua pois o acesso aos sistemas é baseado em sua seção na rede corporativa.
+
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
+
+
+**PORTABILIDADE:**
+
+- **RNF10 - Multiplataforma:** O SISGAM foi desenvolvido com Nodejs no  Back-end e ReactJS no Front-end e banco de dados MySQL, podendo assim ser executado no Microsoft Windows, MAC OS e em distribuições cujo Kernel seja Linux. Além da perspectiva de compatibilidade prezou-se pela redução de custos, através da utilização de tecnologias open-source, cumprindo com um requisito chave do cliente EMSERF neste projeto: Implementar a solução com custo zero.
+
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
+
+**REUSABILIDADE:**
+
+- **RNF11 - Arquitetura Desacoplada:** A aplicação possui sua arquiterura desacoplada onde API e Front-end estão em folders separados dentro do projeto, portanto cada um desses componentes pode ser reusado em novas aplicações da EMSERF.
+
 - [ ] Essencial 
 - [x] Importante
-- [ ]  Desejável
-
-**Segurança**: No modo de segurança para o operador utilizamos da autenticação via LocalStorage, onde o utilizando o recurso do próprio navegador é possível realizar a autenticação e mantê-lo na sessão até que efetue logout.
-
-**TESTE DO CAPTCHA**
-
-Validação se é ou não um robô.
-
-**Prioridade**:
-- [x] Essencial 
-- [ ] Importante
-- [ ]  Desejável
-
-**HARDWARE E SOFTWARE:**
-
-Utilizou-se para o desenvolvimento da aplicação programas como, MySQL Workbench, HeidiSQL, Draw.io, Figma, Stack Javascript, React JS, Node JS, etc. Foram componentes fundamentais para a criação e fundamentação da aplicação.
-
-**PROGRAMAS GRATUITOS**
-
-Utilização de programas gratuitos para diminuição de custos.
-
-**Prioridade**:
-- [x] Essencial 
-- [ ] Importante
 - [ ]  Desejável
 
  ---
