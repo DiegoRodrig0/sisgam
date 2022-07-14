@@ -50,7 +50,7 @@ ODIVAL QUARESMA NETO • Client-side </br>
 
 ## Público Alvo:
 
-Este manual destina-se aos gestores e pontos focais da equipe técnica de Manutenção Ferroviária do cliente EMSERF *Empresa Maranhense de Serviços Ferroviários*, dando-lhes o conhecimento necessário para operar em uma interface Web capaz de definir, em tempo real, quais profissionais devem receber alertas de manutenção em sua região de atuação.
+Este manual destina-se aos gestores e pontos focais da equipe técnica de Manutenção Ferroviária do cliente **EMSERF** *Empresa Maranhense de Serviços Ferroviários*, dando-lhes o conhecimento necessário para operar em uma interface Web capaz de definir, em tempo real, quais profissionais devem receber alertas de manutenção em sua região de atuação.
 </br></br></br></br>
 
 ---
@@ -80,7 +80,8 @@ Este manual destina-se aos gestores e pontos focais da equipe técnica de Manute
  
 Empresas de grande porte que trabalham com manutenção, logística, gerenciamento de estoque, etc, geralmente possuem sistemas de informação que geram alertas para suas equipes, seja para manutenção de equipamentos, seja para informar atualização de estoque, manutenções urgentes e etc.
 
-Nesse contexto, temos o cenário da **EMSERF** *Empresa Maranhense de Serviços Ferroviários*, que já possui um **Sistema Core** que gerencia toda a organização, e este possui um endpoint para gerar alertas de manutenção e atualização de estoque por e-mail, todavia o banco de dados que informa os técnicos que recebem alerta é atualizado manualmente. Isso se deve ao fato da empresa ter feito apenas a aquisição do ***serviço de envio de alertas sem comprar a interface*** (que na ocasião teria um custo bastante elevado), por conta desse desvio a equipe de operações passou a seguir o seguinte fluxo: 
+Nesse contexto, temos o cenário da **EMSERF**, que já possui um **Sistema Core** que gerencia toda a organização, e este possui um endpoint para gerar alertas de manutenção e atualização de estoque por e-mail, todavia o banco de dados que informa os técnicos que recebem alerta é atualizado manualmente. Isso se deve ao fato da empresa ter feito apenas a aquisição do ***serviço de envio de alertas sem comprar a interface*** (que na ocasião teria um custo bastante elevado).
+Por conta desse desvio a equipe de operações passou a seguir o seguinte fluxo:<br/>
 O setor de manutenção manda um *"Planilhão de Excel"* semanalmente com a relação de técnicos, por conseguinte, também de forma manual, o Administrador de Banco de Dados escreve consultas SQL (INSERT/UPDATE/DELETE) diretamente na base de dados, com os técnicos que, de fato, devem receber os alertas. Isso gera desgaste, sujeição à falha humana e sobretudo impacto direto no SLA das demandas do time de desenvolvimento EMSERF.
 
 Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas de Manutenção**. Reiteramos que, o SISGAM não substitui o SISCORE, ele é apenas uma **Aplicação Satélite** desenvolvida especialmente para automatizar o processo e reduzir custos de implementação do fabricante do SISCORE, conforme diagrama abaixo:
@@ -99,8 +100,8 @@ CAPÍTULO I - DESCRIÇÃO GERAL DO SISTEMA </br>
  
  **Abrangência e Sistemas Relacionados:**
 
-O SISGAM é uma Aplicação do tipo Satélite e compreende o fluxo completo de gerenciamento de usuários que recebem alertas de manutenção do endpoint (já existente) do SISCORE, portanto ele contempla uma operação de monitoramento preventivo e/ou corretivo da área de manutenção.
-Sua relevância na operação é muito alta, pois quanto mais agilidade há no processo de priorização de alertas, mais rapidamente problemas serão resolvidos ou previnidos.
+O SISGAM é uma aplicação do tipo Satélite, e compreende o fluxo completo de gerenciamento de usuários que recebem alertas de manutenção pelo endpoint (já existente) do SISCORE, portanto ele contempla uma operação de monitoramento preventivo e/ou corretivo da área de manutenção.
+Sua relevância na operação é muito alta, pois quanto mais agilidade há no processo de priorização de alertas, mais rapidamente problemas serão resolvidos e ativos ferroviários críticos serão preservados ou recuperados.
 
 A aplicação possui 03 tipos de usuário:
 
@@ -108,7 +109,7 @@ A aplicação possui 03 tipos de usuário:
 
 - **Gestor**: Usuário responsável pela operação e pelo mapa de manutenção EMSERF. Possui acesso as mesmas funcionalidades do Ponto Focal, contudo as utiliza conforme conveniência ou até mesmo ausência do Ponto Focal.
 
-- **Administrador**: Usuário desenvolvedor da aplicação, atua em melhorias do software tendo pleno acesso ao código fonte da aplicação.
+- **Administrador**: Usuário desenvolvedor da aplicação, atua em melhorias do software tendo pleno acesso ao código fonte e servidor de produção.
  
 <h5 align="center">
 <img src="https://user-images.githubusercontent.com/40738499/178416362-3b72850e-0ef4-454d-a1b0-0e015838084a.jpeg" width="800px" /></br>
@@ -123,7 +124,7 @@ CAPÍTULO II - REQUISITOS FUNCIONAIS </br>
  
 **Edição de Grade de Unidades**
 
-O sistema deve permitir que Ponto Focal e/ou Gestor adicionem, editem ou deletem unidades da empresa em uma grade na tela principal.
+O sistema deve permitir que Ponto Focal e/ou Gestor vincule ou desvincule técnicos nas unidades de manutenção da empresa em uma grade na tela principal.
 
 **Ator**: Ponto Focal e/ou Gestor.
 
@@ -131,57 +132,66 @@ O sistema deve permitir que Ponto Focal e/ou Gestor adicionem, editem ou deletem
 - [x] Essencial 
 - [ ] Importante
 - [ ]  Desejável
+<br/>
 
-**Entradas e pré condições:** Conexão com internet e privilégios de administração
+**Entradas e pré condições:** Conexão com internet e habilitação do usuário.
 
-**Saídas e pós condições:** Modificação na configuração da grade de unidades
+**Saídas e pós condições:** Modificação na configuração da grade de unidades.
 
 **Fluxo de eventos principal**
 
-1. Ponto Focal e/ou Gestor loga no sistema e vai para página principal;  
+1. Ponto Focal e/ou Gestor loga no sistema e é redirecionado para a página principal;  
 2. Ponto Focal e/ou Gestor clica no ícone de edição nos elementos que representam as unidades da empresa (dispostos em forma de grade);  
-3. Uma nova tela se abre oferecendo opções para editar detalhes numa unidade específica, há opção para deletar a unidade também.
+3. Uma nova tela se abre oferecendo opções para editar detalhes numa unidade específica, há opção para vincular/desvincular técnicos na unidade selecionada.
   
 
 **Gerenciamento de usuários que devem receber alertas**
 
-O sistema deve permitir que Ponto Focal e/ou Gestor habilitados possam vincular ou desvincular gerenciando quem de fato deve receber alertas de manutenção
+O sistema deve permitir que Ponto Focal e/ou Gestor habilitados possam vincular ou desvincular técnicos, gerenciando quem de fato deve receber alertas de manutenção.
 
 **Ator**: Ponto Focal e/ou Gestor.
+
+**Prioridade**:
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
+<br/>
+
+**Entradas e pré condições:** Estar logado no sistema, ter vinculo em uma ou mais sedes de manutenção da EMSERF.
+
+**Saídas e pós condições:** Modificação em um vínculo específico.
+
+**Fluxo de eventos principal**
+
+1. O Ponto Focal e/ou Gestor seleciona uma unidade da empresa na tela principal.<br/>
+2. Na listagem de técnicos da unidade escolhida ele pode então vincular ou desvincular técnicos na sede de manutenção selecionada e a partir de então o serviço de envio de alertas passa automaticamente a disparar emails para o usuário vinculado à determinada sede, pois ele enxerga apenas o banco de dados, cumprindo assim o seu papel de "Aplicação Satélite".
+
+**Prioridade**:
+- [x] Essencial 
+- [ ] Importante
+- [ ]  Desejável
+<br/>
+
+**Geração de Matriz Geral dos Técnicos alocados no SISGAM**
+
+O sistema deve gerar tabela excel em arquivo que pode ser impresso ou salvo em disco com extensão .xls ou .pdf, contendo todos os técnicos, separados por unidades da organização que estão adicionados no sistema e aptos para receber emails.
+
+**Ator**: Ponto Focal e/ou Gestor.
+
+**Entradas e pré condições:** Acesso ao sistema.
+
+**Saídas e pós condições:** Um arquivo com extensão .xls ou .pdf.
+
+**Fluxo de eventos principal**
+
+1. O Ponto Focal e/ou Gestor clica no ícone de "Export Excel" no menu retrátil lateral.
+2. O sistema executa método de exportação do array resultante das movimentações aplicadas.
 
 **Prioridade**:
 - [ ] Essencial 
 - [x] Importante
 - [ ]  Desejável
-
-**Entradas e pré condições:** Estar logado no sistema, ter um alerta aberto
-
-**Saídas e pós condições:** Modificação em um alerta específico
-
-**Fluxo de eventos principal**
-
-1. O Ponto Focal e/ou Gestor seleciona uma unidade da empresa na tela principal; 2. Na listagem de técnicos da unidade escolhida ele pode então vincular ou desvincular técnicos na sede de manutenção selecionada e a partir de então o sistema core de alertas passa automaticamente a disparar alertas para o usuário vinculado a determinada sede, pois ele enxerga apenas o banco de dados, cumprindo assim o seu papel de "Aplicação Satélite".
-
-  
-
-**Geração de Tabela HTML dos Técnicos Alocados no Sistema**
-
-O sistema deve gerar tabela excel em arquivo que pode ser impresso ou salvo em disco com extensão .xls, contendo todos os técnicos, separados por unidades da organização, que estão adicionados no sistema e aptos para receber notificações.
-
-**Ator**: Ponto Focal e/ou Gestor.
-
-**Prioridade**:
-- [ ] Essencial 
-- [x] Importante
-- [ ]  Desejável
-
-**Entradas e pré condições:** Acesso ao sistema
-
-**Saídas e pós condições:** Um arquivo com extensão .xls
-
-**Fluxo de eventos principal**
-
-1. O Ponto Focal e/ou Gestor clica no ícone de "Export Excel" no Menu Lateral Retrátil; 2. O sistema executa método de exportação do array resultante das movimentações aplicadas.
+<br/>
 
  ---
  
@@ -211,7 +221,7 @@ CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
 - [ ] Importante
 - [ ]  Desejável
 
-- **RNF04 - Probabilidade de falha durante fase operacional:** Mesmo não se tratando de uma aplicação contínua em jornada diária, uma vez que eu uso é semanal, ainda assim possui alta criticidade no que é capaz de definir e por conseguinte, houve uma preocupação muito grande em contornar comportamentos inesperados do sistema como queda de servidores, banco de dados sem resposta temporária etc. Tanto na API para o programador quanto para o user/client existem contornos, para que na maioria dos casos, o frontend fique estático, quando uma operação CRUD não seja completada, por exemplo.
+- **RNF04 - Probabilidade de falha durante fase operacional:** Mesmo não se tratando de uma aplicação contínua em jornada diária, uma vez que eu uso é semanal, ainda assim possui alta criticidade no que é capaz de definir e por conseguinte, houve uma preocupação muito grande em contornar comportamentos inesperados do sistema como queda de servidores, banco de dados sem resposta temporária etc. Tanto no console da API (para o programador) quanto para o user/client na interface, existem tratamentos de exceção, para que uma operação CRUD não seja completada, o SISGAM fique estático e complete a operação quando a conexão com a rede ou banco de dados for reestabelecida, por exemplo.
 
 - [ ] Essencial 
 - [ ] Importante
@@ -219,22 +229,22 @@ CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
 
 **DESEMPENHO:**
 
-- **RNF05 - Requisitos de resposta:** Qualquer ação no SISGAM deve ter resposta num intervalo default de 2 segundos, e requisições HTTP possuem timeout de 5 segundos, sendo superado este tempo a operação é reiniciada e sinalizada através de um componente de modal do React, mostrando que há um delay acima do esperado na requisição. 
+- **RNF05 - Requisitos de resposta:** Qualquer ação no SISGAM deve ter resposta num intervalo default de 02 segundos, e requisições HTTP possuem timeout de 05 segundos, uma vez que este intervalo é superado a operação é reiniciada e sinalizada através de um componente de modal do React, mostrando que há um delay acima do esperado na request. 
 
 - [x] Essencial 
 - [ ] Importante
 - [ ]  Desejável
 
-- **RNF06 - Requisitos de processamento (throughput):** O sistema deve processar no mínimo 05 transações por segundo, seguindo um padrão já estabelecido em todas as aplicações EMSERF.
+- **RNF06 - Requisitos de processamento (throughput):** O sistema deve processar no mínimo 05 transações por segundo, seguindo um padrão já estabelecido em todas as aplicações Web do cliente EMSERF.
 
 - [x] Essencial 
 - [ ] Importante
 - [ ]  Desejável
 
-- **RNF07 - Requisitos de espaço:** O SISGAM utiliza uma stage (cópia) do banco de dados do SISCORE (sistema já existente que envia alertas de manutenção) e através de dataflows, tem seus dados atualizados apenas uma vez por dia em D-1 às 0h, uma vez que sua utilização é semanal e em casos excepcionais mais de uma vez por semana, por conseguinte o espaço em disco corresponde apenas aos meta arquivos de pacotes, conectores e binários do sistema. Em função disso, necessita de uma quantidade de espaço em disco para processar o volume de dados. Para atender a essa necessidade, 1.5 GB de espaço em disco para armazenamento é considerado suficiente na versão atual e com gordura para eventualidades.
+- **RNF07 - Requisitos de espaço:** O SISGAM utiliza uma stage (cópia) do banco de dados do SISCORE (sistema já existente que envia alertas de manutenção) e através de dataflows, tem seus dados atualizados apenas uma vez por dia em D-1 às 0h, uma vez que sua utilização é semanal e em casos excepcionais mais de uma vez por semana, por conseguinte o espaço em disco corresponde apenas aos meta arquivos de pacotes, conectores, binários do sistema e arquivos estáticos em geral. Em função disso, necessita de uma quantidade de espaço em disco para armazenar e processar o volume de dados. Para atender a essa necessidade, 1.5 GB de espaço em disco é considerado suficiente na versão atual do SISGAM (e com gordura para updates e instalação de novas features, pacotes e etc).
 
-- [ ] Essencial 
-- [x] Importante
+- [x] Essencial 
+- [ ] Importante
 - [ ]  Desejável
 
 
@@ -244,18 +254,29 @@ CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
 
 - [x] Essencial 
 - [ ] Importante
-- [ ]  Desejável
+- [ ] Desejável
 
-- **RNF09 - Autenticação:** o SISGAM é uma aplicação que só pode ser acessada na rede corporativa EMSERF, e sendo assim, usuário precisa fazer Logon na mesma. Após, uma GPO é carregada dando-lhe privilégios e autenticando sistemas web e desktop através das diretivas de seção. Com todo esse fluxo de segurança e controle de logs, o SISGAM tem sua autenticação a nível de servidor e para manter o usuário logado de forma simples, utilizou-se a estratégia LocalStorage, onde armazena-se temporariamente os dados da seção no browser até que o usuário efetue Logout. O usuário jamais conseguirá logar na aplicação com uma credencial que não seja a sua pois o acesso aos sistemas é baseado em sua seção na rede corporativa.
+- **RNF09 - Autenticação:** O fluxo de Autenticação do SISGAM, à princípio era no formato de assinatura digital com JWT (Json Web Token), todavia conforme realizamos o processo de refinar os requisitos no padrão SCRUM, identificamos que na nossa infraestrutura EMSERF, não precisaríamos deste recurso, uma vez que ao fazer Logon na máquina (S.O), com usuário de rede EMSERF, uma GPO* já roda na sesssão do usuário, dando-lhe privilégios ou não e autenticando sistemas web e desktop. Além do controle de logs para efeito de Auditorias internas.
+
+Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via LocalStorage, onde o utilizando o recurso do próprio navegador é possível realizar a autenticação e mantê-lo na sessão até que efetue logout. Abaixo o componente "Auth.jsx", cuja variável "authenticated" é o termômetro da sessão, dessa forma, componentes que precisam do status da sessão passam a acessá-la em tempo de execução para serem renderizados ou não. Vide abaixo trecho do código de construção do componente "Auth.jsx", responsável pela Autenticação e Gerenciamento de sessão do SISGAM.
+
+<h5 align="center">
+<img src="https://user-images.githubusercontent.com/40738499/175664238-67f52738-4080-431b-9264-6db78021b15b.gif" width="900px" /></br>
+<p> Estratégia LocalStorage </p>
+</h5>
 
 - [ ] Essencial 
 - [x] Importante
 - [ ]  Desejável
 
+*Importante reforrçar que os usuários da EMSERF, utilizam a mesma senha pra logar em qualquer sistema web ou desktop. Uma vez autenticado na rede corporativa, ou seja, ao seja, Logon no Sistema Operacional, um script é carregado no servidor tratando privilégios e diretrizes de segurança.
+Sendo assim, não existe necessidade do sistema ter a funcionalidade "esqueceu sua senha?". Além disso como todo bom sistema, há o fluxo de captura de logs, gerado automaticamente para fins de auditoria e Política Antifraude.*
 
 **PORTABILIDADE:**
 
-- **RNF10 - Multiplataforma:** O SISGAM foi desenvolvido com Nodejs no  Back-end, ReactJS no Front-end, e pode ser executado no Microsoft Windows, MAC OS e em várias distribuições cujo Kernel seja Linux.
+- **RNF10 - Multiplataforma:**
+- O SISGAM foi desenvolvido com Nodejs no Back-end, ReactJS no Front-end e database MySQL, portanto podendo ser executado no Microsoft Windows, MacOS e em várias distribuições cujo Kernel seja Linux (via localhost).
+- Pode ser executado nas respectivas linhas de servidores das plataformas supracitadas e também na forma estática integrado a uma imagem Docker. Neste ultimo cenário, criou-se uma imagem com Nodejs no Alpine Linux, e a execução foi bem sucedida e a cada nova feature, um **rebuild** é executado. 
 
 - [x] Essencial 
 - [ ] Importante
@@ -263,7 +284,7 @@ CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
 
 **REUSABILIDADE:**
 
-- **RNF10 - Arquitetura Desacoplada:** A aplicação possui sua arquitetura desacoplada onde API e Front-end estão em diretórios separados dentro do projeto, portanto cada um desses componentes pode ser reusado em novas aplicações da EMSERF.
+- **RNF10 - Arquitetura Desacoplada:** A aplicação possui sua arquitetura desacoplada onde API e Front-end estão em diretórios separados dentro do projeto, portanto cada um desses componentes pode ser reusado em novas aplicações da EMSERF a qualquer tempo.
 
 - [x] Essencial 
 - [ ] Importante
@@ -274,25 +295,6 @@ CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
  <h3 align="center">
 CAPÍTULO IV - DESCRIÇÃO DA INTERFACE COM O USUÁRIO </br>
  </h3>
-
-
-**Autenticação do Usuário**
-O fluxo de Autenticação do SISGAM, à princípio era no formato de assinatura digital com JWT (Json Web Token), todavia conforme realizamos o processo de refinar os requisitos, identificamos que na nossa infraestrutura EMSERF, não precisaríamos deste recurso, uma vez que ao fazer Logon na máquina (S.O), com usuário de rede EMSERF, uma GPO* já roda na sesssão do usuário, dando-lhe privilégios ou não e autenticando sistemas web e desktop. Além do controle de logs para efeito de Auditorias internas.
-
-Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via LocalStorage, onde o utilizando o recurso do próprio navegador é possível realizar a autenticação e mantê-lo na sessão até que efetue logout. Abaixo o componente "Auth.jsx", cuja variável "authenticated" é o termômetro da sessão, dessa forma, componentes que precisam do status da sessão passam a acessá-la em tempo de execução para serem renderizados ou não. Vide abaixo trecho do código de construção do componente "Auth.jsx", responsável pela Autenticação e Gerenciamento de sessão do SISGAM.
-
----
-
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/175664238-67f52738-4080-431b-9264-6db78021b15b.gif" width="900px" /></br>
-<p> Estratégia LocalStorage </p>
-</h5>
-
---- 
-
-**Importante considerar que os usuários da EMSERF, utilizam a mesma senha pra logar em qualquer sistema web ou desktop**. Uma vez autenticado na rede corporativa, ou seja, ao seja, **Logon no Sistema Operacional, um script é carregado no servidor tratando privilégios e diretrizes de segurança**.
-Sendo assim, **não existe necessidade do sistema ter a funcionalidade "esqueceu sua senha?"**. Além disso como todo bom sistema, há o fluxo de captura de logs, gerado automaticamente para fins de auditoria e **Política Antifraude.**
-
 
 **Fluxo Geral do SISGAM**:
 
