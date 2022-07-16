@@ -47,7 +47,7 @@ O setor de manutenção manda um *"Planilhão de Excel"* semanalmente com a rela
 Como MVP, temos a proposta do **SISGAM • Sistema de Gerenciamento de Alertas de Manutenção**. Reiteramos que, o SISGAM não substitui o SISCORE, ele é apenas uma **Aplicação Satélite** desenvolvida especialmente para automatizar o processo e reduzir custos de implementação do fabricante do SISCORE, conforme diagram abaixo:
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/40738499/175784007-abc51aea-0a5f-4a59-ba36-1ca939e0efbc.png" width="700px" />
+<img src="https://user-images.githubusercontent.com/40738499/175784007-abc51aea-0a5f-4a59-ba36-1ca939e0efbc.png" width="800px" />
 	<p>Diagrama da Solução</p>
 </div>
 
@@ -302,29 +302,29 @@ O sistema tem um ótimo modelo conceitual, evitando que o usuário opere cegamen
 **3° Frame:** Tela com uma comunicação buscando objetividade e simplicidade, nesse frame temos os técnicos alocados em cada sede e através de um ícone de fácil interpretação é possível realocar outros técnicos pra essa localidade.
 
 <!-- <div align="center">
-<img src="https://user-images.githubusercontent.com/84028669/173393823-c7b60715-8c00-4cac-9e13-bc41fcac23ae.jpeg"width="900px" />
+<img src="https://user-images.githubusercontent.com/84028669/173393823-c7b60715-8c00-4cac-9e13-bc41fcac23ae.jpeg"width="700px" />
 </div> -->
 
 **4° e 5° Frame:** Duas telas onde continuamos propondo um design simples, é mostrado a facilidade de compreenção das acões do sistema, possibilitando deletar apenas um técnico ou todos da sede, e um ícone de representatividade universal para significar o termo "deletar".
 
 </br>
 <div align="center">
-<img src="https://user-images.githubusercontent.com/40738499/174424686-785f8635-d321-459f-bd25-1745c82395be.gif" width="900px" />
+<img src="https://user-images.githubusercontent.com/40738499/174424686-785f8635-d321-459f-bd25-1745c82395be.gif" width="800px" />
 </div>
 
 <!-- <div align="center">
-<img src="https://user-images.githubusercontent.com/84028669/173394174-d355f65b-04e8-4e1b-93ad-2069dfe36abb.jpeg"width="900px" />
+<img src="https://user-images.githubusercontent.com/84028669/173394174-d355f65b-04e8-4e1b-93ad-2069dfe36abb.jpeg"width="800px" />
 </div>
 </br>
 <div align="center">
-<img src="https://user-images.githubusercontent.com/84028669/173394370-cd585cb4-5443-4b44-9d10-33ea8b705028.jpeg"width="900px" />
+<img src="https://user-images.githubusercontent.com/84028669/173394370-cd585cb4-5443-4b44-9d10-33ea8b705028.jpeg"width="800px" />
 </div> -->
 
 
 **6° Frame:** Nesse frame é onde o usuário tem uma visão geral sobre as alocações em cada sede, podendo exportar um documento (.cvs ou .pdf) ao final de suas ações no sitema.
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/40738499/174424704-b0edc611-7660-43e9-a4f4-40b10d1d791b.gif"width="900px" />
+<img src="https://user-images.githubusercontent.com/40738499/174424704-b0edc611-7660-43e9-a4f4-40b10d1d791b.gif"width="800px" />
 </div>
 <br/>
 
@@ -354,27 +354,31 @@ Por fim, pode-se ponderar a adição de uma tela que apresente um _mapa do siste
 **Login**:
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/40738499/176888676-1b91e9f3-fe44-4ba7-b108-d759db5bba25.gif" width="700px" />
+<img src="https://user-images.githubusercontent.com/40738499/176888676-1b91e9f3-fe44-4ba7-b108-d759db5bba25.gif" width="900px" />
 </div><br/><br/>
 
 **Dashboard responsivo**:
 
-<img src="https://user-images.githubusercontent.com/40738499/176888728-e17009a5-8ab8-4798-9428-3d4f57f9e2ea.gif" width="700px" />
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888728-e17009a5-8ab8-4798-9428-3d4f57f9e2ea.gif" width="900px" />
 </div><br/><br/>
 
 **Detalhes da Unidade**:
 
-<img src="https://user-images.githubusercontent.com/40738499/176888787-7b663239-8f88-4cbc-a66a-2afde277186b.gif" width="700px" />
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888787-7b663239-8f88-4cbc-a66a-2afde277186b.gif" width="900px" />
 </div><br/><br/>
 
 **Exportação de Relatórios**:
 
-<img src="https://user-images.githubusercontent.com/40738499/176888841-e10a5aee-e51d-4fc8-a578-d4b73762fa4a.gif" width="700px" />
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888841-e10a5aee-e51d-4fc8-a578-d4b73762fa4a.gif" width="900px" />
 </div><br/><br/>
 
 **Logout**:
 
-<img src="https://user-images.githubusercontent.com/40738499/176888907-d79d7aff-652d-4c32-878b-e37349ae5441.gif" width="700px" />
+<div align="center">
+<img src="https://user-images.githubusercontent.com/40738499/176888907-d79d7aff-652d-4c32-878b-e37349ae5441.gif" width="900px" />
 </div>
 
 ---
