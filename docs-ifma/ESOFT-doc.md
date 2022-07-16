@@ -256,21 +256,19 @@ CAPÍTULO III - REQUISITOS NÃO FUNCIONAIS </br>
 - [ ] Importante
 - [ ] Desejável
 
-- **RNF09 - Autenticação:** O fluxo de Autenticação do SISGAM, à princípio era no formato de assinatura digital com JWT (Json Web Token), todavia conforme realizamos o processo de refinar os requisitos no padrão SCRUM, identificamos que na nossa infraestrutura EMSERF, não precisaríamos deste recurso, uma vez que ao fazer Logon na máquina (S.O), com usuário de rede EMSERF, uma GPO* já roda na sesssão do usuário, dando-lhe privilégios ou não e autenticando sistemas web e desktop. Além do controle de logs para efeito de Auditorias internas.
-
-Por conseguinte, simplificamos o fluxo para a estratégia de autenticação via LocalStorage, onde o utilizando o recurso do próprio navegador é possível realizar a autenticação e mantê-lo na sessão até que efetue logout. Abaixo o componente "Auth.jsx", cuja variável "authenticated" é o termômetro da sessão, dessa forma, componentes que precisam do status da sessão passam a acessá-la em tempo de execução para serem renderizados ou não. Vide abaixo trecho do código de construção do componente "Auth.jsx", responsável pela Autenticação e Gerenciamento de sessão do SISGAM.
-
-<h5 align="center">
-<img src="https://user-images.githubusercontent.com/40738499/175664238-67f52738-4080-431b-9264-6db78021b15b.gif" width="900px" /></br>
-<p> Estratégia LocalStorage </p>
-</h5>
+- **RNF09 - Autenticação:** O fluxo de Autenticação do SISGAM, à princípio era no formato de assinatura digital com JWT (Json Web Token), todavia conforme realizamos o processo de refinar os requisitos no padrão SCRUM, identificamos que na nossa infraestrutura EMSERF, não precisaríamos deste recurso, uma vez que ao fazer Logon na máquina (S.O), com usuário de rede EMSERF, uma GPO já roda na sesssão do usuário, dando-lhe privilégios ou não e autenticando sistemas web e desktop, além do controle de logs para efeito de auditorias internas. 
+Por conseguinte, simplificamos o fluxo para a estratégia de autenticação básica via LocalStorage, onde utilizando o recurso do próprio navegador é possível realizar a autenticação e manter um usuário na sessão até que efetue logout.
 
 - [ ] Essencial 
 - [x] Importante
 - [ ]  Desejável
 
-*Importante reforrçar que os usuários da EMSERF, utilizam a mesma senha pra logar em qualquer sistema web ou desktop. Uma vez autenticado na rede corporativa, ou seja, ao seja, Logon no Sistema Operacional, um script é carregado no servidor tratando privilégios e diretrizes de segurança.
-Sendo assim, não existe necessidade do sistema ter a funcionalidade "esqueceu sua senha?". Além disso como todo bom sistema, há o fluxo de captura de logs, gerado automaticamente para fins de auditoria e Política Antifraude.*
+Importante reforçar que os usuários da EMSERF, utilizam a mesma senha pra logar em qualquer sistema web ou desktop, sendo assim, não existe necessidade do sistema ter a funcionalidade *"esqueceu sua senha?"*.
+
+<h5 align="center">
+<img src="https://user-images.githubusercontent.com/40738499/175664238-67f52738-4080-431b-9264-6db78021b15b.gif" width="900px" /></br>
+<p> Estratégia LocalStorage </p>
+</h5>
 
 **PORTABILIDADE:**
 
